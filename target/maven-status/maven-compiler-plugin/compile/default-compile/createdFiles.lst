@@ -1,0 +1,11 @@
+org\eugenetech\littlehelpbook\data\AirtableBase.class
+org\eugenetech\littlehelpbook\BuildBook.class
+org\eugenetech\littlehelpbook\data\Resource.class
+org\eugenetech\cli\Base.class
+org\eugenetech\littlehelpbook\airtable\Airtable.class
+org\eugenetech\littlehelpbook\data\Category.class
+org\eugenetech\littlehelpbook\data\Repository.class
+org\eugenetech\littlehelpbook\data\AirtableRecord.class
+org\eugenetech\littlehelpbook\data\City.class
+org\eugenetech\littlehelpbook\data\Schedule.class
+org\eugenetech\littlehelpbook\data\Subcategory.class
