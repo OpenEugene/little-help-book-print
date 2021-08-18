@@ -3,6 +3,32 @@
         font-family: Ubuntu, "times new roman", times, roman, serif;
     }
 
+    #logo {
+        width: 3in;
+        text-align: center;
+        align-self: center;
+        alignment: center;
+        padding-top: 0.5in;
+        padding-bottom: 0.5in;
+    }
+
+    #title {
+        text-align: center;
+        font-weight: bold;
+        font-size: xx-large;
+        padding-top: 0.5in;
+        padding-bottom: 0.5in;
+    }
+    #subtitle {
+        text-align: center;
+        font-weight: bold;
+        font-size: larger;
+        padding-top: 0.5in;
+    }
+    #production {
+        text-align: center;
+    }
+
     .resource {
         page-break-inside: avoid;
     }
@@ -73,17 +99,19 @@
     h1 {
         text-align: center;
         page-break-before: always;
+        page-break-after: avoid;
     }
 
     h2 {
         text-align: left;
         border-bottom: solid black 1pt;
+        page-break-after: avoid;
     }
 
     h3 {
         margin-bottom: 0;
         padding-bottom: 0;
-
+        page-break-after: avoid;
     }
 
     @page {
