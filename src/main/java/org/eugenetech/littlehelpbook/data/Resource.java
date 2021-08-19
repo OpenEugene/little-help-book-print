@@ -9,6 +9,7 @@ import java.util.Set;
 public class Resource extends AirtableBase {
     protected Set<Subcategory> subcategories = new HashSet<>();
     protected Set<Category> categories = new HashSet<>();
+    protected Set<CatSubcat> catsubcats = new HashSet<>();
     protected Set<City> cities = new HashSet<>();
 
     protected String phone;

@@ -4,7 +4,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import lombok.extern.slf4j.Slf4j;
 
-import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 @Slf4j
@@ -13,6 +12,7 @@ public class Repository {
     private Map<String, City> cities = new HashMap<>();
     private Map<String, Resource> resources = new HashMap<>();
     private Map<String, Subcategory> subcategories = new HashMap<>();
+    private Map<String, CatSubcat> catsubcats = new HashMap<>();
     private Map<String, Schedule> schedules = new HashMap<>();
 
     // CITY
@@ -100,6 +100,7 @@ public class Repository {
         return this.subcategories.get(id);
     }
 
+    /*
     public List<Subcategory> getSubcategories_en() {
         final List<Subcategory> _subcategories = new Vector<>();
         _subcategories.addAll(this.subcategories.values());
@@ -112,6 +113,36 @@ public class Repository {
         _subcategories.addAll(this.subcategories.values());
         Collections.sort(_subcategories, Comparator.comparing(Subcategory::getName_es));
         return _subcategories;
+    }
+    */
+
+    // CATSUBCAT
+
+    public CatSubcat addCatSubcat(final AirtableRecord record) {
+        final CatSubcat catSubcat = new CatSubcat();
+        catSubcat.id = record.getId();
+        catSubcat.name_en = fieldAsText(record.jsonNode, "Name");
+        catSubcat.name_es = fieldAsText(record.jsonNode, "Name");
+
+        for (final String idCategory : fieldAsIDList(record.jsonNode, "Category")) {
+            final Category category = this.getCategory(idCategory);
+            catSubcat.setCategory(category);
+            category.getCatsubcats().add(catSubcat);
+        }
+
+        for (final String idSubcategory : fieldAsIDList(record.jsonNode, "Subcategory")) {
+            final Subcategory subcategory = this.getSubcategory(idSubcategory);
+            catSubcat.setSubcategory(subcategory);
+            subcategory.getCatsubcats().add(catSubcat);
+        }
+
+        this.catsubcats.put(catSubcat.id, catSubcat);
+
+        return catSubcat;
+    }
+
+    public CatSubcat getCatSubcat(final String id) {
+        return this.catsubcats.get(id);
     }
 
     // RESOURCE
@@ -142,17 +173,40 @@ public class Repository {
             resource.cities.add(city);
         }
 
+        /*
+
+        boolean hasSubcategory = false;
         for (final String idSubcategory : fieldAsIDList(record.jsonNode, "Subcategory")) {
             final Subcategory subcategory = this.getSubcategory(idSubcategory);
             subcategory.getResources().add(resource);
             resource.subcategories.add(subcategory);
+
+            if (subcategory.category != null)
+                hasSubcategory = true;
         }
 
-        if (resource.subcategories.size() == 0) {
+        if (!hasSubcategory) {
             for (final String idCategory : fieldAsIDList(record.jsonNode, "Category")) {
                 final Category category = this.getCategory(idCategory);
                 category.getResources().add(resource);
                 resource.categories.add(category);
+            }
+        }
+        */
+
+        for (final String idCatSubcat : fieldAsIDList(record.jsonNode, "CatSubcat")) {
+            final CatSubcat catSubcat = this.getCatSubcat(idCatSubcat);
+
+            catSubcat.resources.add(resource);
+            resource.catsubcats.add(catSubcat);
+
+            if (catSubcat.subcategory != null) {
+                resource.subcategories.add(catSubcat.subcategory);
+                catSubcat.subcategory.resources.add(resource);
+            }
+            else if (catSubcat.category != null) {
+                resource.categories.add(catSubcat.category);
+                catSubcat.category.resources.add(resource);
             }
         }
 

@@ -52,6 +52,10 @@ public class BuildBook extends Base {
             repository.addSubcategory(record);
         }
 
+        for (final AirtableRecord record : airtable.getAll("CatSubcats")) {
+            repository.addCatSubcat(record);
+        }
+
         for (final AirtableRecord record : airtable.getAll("Help%20Services")) {
             repository.addResource(record);
         }
@@ -71,8 +75,14 @@ public class BuildBook extends Base {
         @Cleanup final FileWriter englishWriter = new FileWriter(new File(path, "english.html"));
         @Cleanup final FileWriter spanishWriter = new FileWriter(new File(path, "spanish.html"));
 
+        @Cleanup final FileWriter englishWordWriter = new FileWriter(new File(path, "english.word.html"));
+        @Cleanup final FileWriter spanishWordWriter = new FileWriter(new File(path, "spanish.word.html"));
+
         engine.process("english", english, englishWriter);
         engine.process("spanish", spanish, spanishWriter);
+
+        engine.process("english.word", english, englishWordWriter);
+        engine.process("spanish.word", spanish, spanishWordWriter);
     }
 
     public static void main(String[] args) throws Exception {

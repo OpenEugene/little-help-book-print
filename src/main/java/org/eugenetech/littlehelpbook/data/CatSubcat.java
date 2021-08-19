@@ -7,9 +7,9 @@ import java.util.*;
 
 @Data
 @Slf4j
-public class Subcategory extends AirtableBase {
+public class CatSubcat extends AirtableBase {
     public Category category;
-    public Set<CatSubcat> catsubcats = new HashSet<>();
+    public Subcategory subcategory;
 
     public Set<Resource> resources = new HashSet<>();
 
@@ -27,14 +27,8 @@ public class Subcategory extends AirtableBase {
         return _resources;
     }
 
-    public boolean hasResources() {
-        if (this.resources.size() > 0)
-            return true;
-        return false;
-    }
-
     public void writeInfo() {
-        log.info(this.resources.size() + " Resources in Subcategory " + this.getName_en());
+        log.info(this.resources.size() + " Resources in CatSubcat " + this.getName_en());
     }
 
     @Override

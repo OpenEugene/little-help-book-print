@@ -8,9 +8,11 @@ import java.util.*;
 @Data
 @Slf4j
 public class Category extends AirtableBase {
-    protected Set<Subcategory> subcategories = new HashSet<>();
-    protected Set<Resource> resources = new HashSet<>();
+    public Set<Subcategory> subcategories = new HashSet<>();
+    public Set<CatSubcat> catsubcats = new HashSet<>();
+    public Set<Resource> resources = new HashSet<>();
 
+    /*
     public List<Subcategory> getSubcategories_en() {
         final List<Subcategory> _subcategories = new Vector<>();
         _subcategories.addAll(this.subcategories);
@@ -24,6 +26,32 @@ public class Category extends AirtableBase {
         Collections.sort(_subcategories, Comparator.comparing(Subcategory::getName_es));
         return _subcategories;
     }
+    */
+
+    public List<Subcategory> getSubcategories_en() {
+        final List<Subcategory> _subcategories = new Vector<>();
+
+        for (final CatSubcat catsubcat : this.catsubcats) {
+            if (catsubcat.subcategory != null)
+                _subcategories.add(catsubcat.subcategory);
+        }
+        Collections.sort(_subcategories, Comparator.comparing(Subcategory::getName_en));
+
+        return _subcategories;
+    }
+
+    public List<Subcategory> getSubcategories_es() {
+        final List<Subcategory> _subcategories = new Vector<>();
+
+        for (final CatSubcat catsubcat : this.catsubcats) {
+            if (catsubcat.subcategory != null)
+                _subcategories.add(catsubcat.subcategory);
+        }
+        Collections.sort(_subcategories, Comparator.comparing(Subcategory::getName_es));
+
+        return _subcategories;
+    }
+
 
     public List<Resource> getResources_en() {
         final List<Resource> _resources = new Vector<>();
@@ -42,6 +70,17 @@ public class Category extends AirtableBase {
     public void writeInfo() {
         log.info(this.subcategories.size() + " Subcategories in Category " + this.getName_en());
         log.info(this.resources.size() + " Resources in Category " + this.getName_en());
+    }
+
+    public boolean hasResources() {
+        if (this.resources.size() > 0)
+            return true;
+
+        for (final Subcategory subcategory : this.subcategories)
+            if (subcategory.hasResources())
+                return true;
+
+        return false;
     }
 
     @Override

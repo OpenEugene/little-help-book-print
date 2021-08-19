@@ -1,0 +1,45 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style th:replace="style"/>
+</head>
+<body>
+<th:block th:each="category : ${repository.categories_en}">
+    <h1 th:text="${category.name_en}"></h1>
+
+    <div class="resource" th:each="resource : ${category.resources_en}">
+        <h3>
+            <span th:text="${resource.name_en}" class="resource_name"/>
+            <span th:if="${resource.languageHelp}">\l\</span>
+            <span th:if="${resource.wheelchair}">\w\</span>
+        </h3>
+        <p class="resource_contact">
+            <span th:text="${resource.address}" class="resource_address"></span>
+            \t\
+            <span th:text="${resource.phone}" class="resource_phone"></span>
+        </p>
+        <p th:text="${resource.description_en}" class="resource_description"></p>
+        <p th:text="${resource.hours_en}" class="resource_hours"></p>
+        <p th:text="${resource.url}" class="resource_url"></p>
+    </div>
+
+    <th:block th:each="subcategory : ${category.subcategories_en}">
+        <h2 th:text="${subcategory.name_en}"></h2>
+        <div class="resource" th:each="resource : ${subcategory.resources_en}">
+            <h3>
+                <span th:text="${resource.name_en}" class="resource_name"/>
+                <span th:if="${resource.languageHelp}">\l\</span>
+                <span th:if="${resource.wheelchair}">\w\</span>
+            </h3>
+            <p class="resource_contact">
+                <span th:text="${resource.address}" class="resource_address"></span>
+                \t\
+                <span th:text="${resource.phone}" class="resource_phone"></span>
+            </p>
+            <p th:text="${resource.description_en}" class="resource_description"></p>
+            <p th:text="${resource.hours_en}" class="resource_hours"></p>
+            <p th:text="${resource.url}" class="resource_url"></p>
+        </div>
+    </th:block>
+</th:block>
+</body>
+</html>

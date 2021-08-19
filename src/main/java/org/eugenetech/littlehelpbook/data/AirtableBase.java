@@ -7,10 +7,10 @@ import lombok.extern.slf4j.Slf4j;
 @Data
 @Slf4j
 public abstract class AirtableBase {
-    protected String id;
+    public String id;
 
-    protected String name_en;
-    protected String name_es;
+    public String name_en;
+    public String name_es;
 
     /**
      * Get the spanish Name, or the English name if there is no Spanish name
