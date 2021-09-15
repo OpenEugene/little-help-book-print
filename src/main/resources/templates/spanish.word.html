@@ -10,8 +10,8 @@
     <div class="resource" th:each="resource : ${category.resources_es}">
         <h3>
             <span th:text="${resource.name_es}" class="resource_name"/>
-            <span th:if="${resource.languageHelp}">\l\</span>
-            <span th:if="${resource.wheelchair}">\w\</span>
+            <span th:if="${resource.languageHelp}" class="resourceIcon">🌐</span>
+            <span th:if="${resource.wheelchair}" class="resourceIcon">♿</span>
         </h3>
         <p class="resource_contact">
             <span th:text="${resource.address}" class="resource_address"></span>
@@ -28,8 +28,8 @@
         <div class="resource" th:each="resource : ${subcategory.resources_es}">
             <h3>
                 <span th:text="${resource.name_es}" class="resource_name"/>
-                <span th:if="${resource.languageHelp}">\l\</span>
-                <span th:if="${resource.wheelchair}">\w\</span>
+                <span th:if="${resource.languageHelp}" class="resourceIcon">🌐</span>
+                <span th:if="${resource.wheelchair}" class="resourceIcon">♿</span>
             </h3>
             <p>
                 <span th:text="${resource.address}" class="resource_address"></span>

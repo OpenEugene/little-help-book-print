@@ -1,8 +1,20 @@
 <html>
 <head>
     <style>
-    body {
-        font-family: Ubuntu, "times new roman", times, roman, serif;
+    body, p, span, a, div {
+        font-family: "Noto Sans", Ubuntu, "Ubuntu", Verdana, sans-serif;
+        font-size: 10pt;
+    }
+
+    a:link {
+        text-underline: none;
+        font-weight: normal;
+        text-decoration: none;
+        color: black;
+    }
+
+    .index-outer {
+        column-count: 2;
     }
 
     #logo {
@@ -21,12 +33,14 @@
         padding-top: 0.5in;
         padding-bottom: 0.5in;
     }
+
     #subtitle {
         text-align: center;
         font-weight: bold;
         font-size: larger;
         padding-top: 0.5in;
     }
+
     #production {
         text-align: center;
     }
@@ -36,8 +50,14 @@
     }
 
     .resource_icon {
-        width: 12px;
-        height: 12px;
+        width: 8pt;
+        height: 8pt;
+        display: inline-block;
+        alignment: center;
+    }
+
+    .resourceIcon {
+        font-family: "Noto Emoji";
     }
 
     .resource_contact {
@@ -69,12 +89,12 @@
         margin: 0;
         padding: 0;
     }
+
     .resource_url {
         clear: both;
         margin: 0;
         padding: 0;
     }
-
 
 
     .crisis_name {
@@ -122,6 +142,10 @@
         height: 8.5in;
         size: 5.5in 8.5in;
     }
+
+    .bodymatter a::after {
+        content: target-counter(attr(href url), page, decimal)
+    }
 </style>
 </head>
 <body>
@@ -135,8 +159,8 @@
         <div class="resource">
             <h3>
                 <span class="resource_name">First Place Family Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1995 Amazon Parkway, Eugene, 97405</span>
@@ -153,7 +177,7 @@ COVID Update: Two separate blocks of time for the preschool. Only six non-staff 
             <h3>
                 <span class="resource_name">St. Vincent de Paul - Eugene Service Station</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">450 Highway 99 North, Eugene, 97402</span>
@@ -167,8 +191,8 @@ COVID Update: Two separate blocks of time for the preschool. Only six non-staff 
         <div class="resource">
             <h3>
                 <span class="resource_name">White Bird - Front Rooms Resource Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">341 E 12th Ave, Eugene, 97401</span>
@@ -184,8 +208,8 @@ COVID Update: Two separate blocks of time for the preschool. Only six non-staff 
         <div class="resource">
             <h3>
                 <span class="resource_name">First Christian Church - Helping Hand Room</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1166 Oak St, Eugene, 97401</span>
@@ -215,7 +239,7 @@ COVID Update: Two separate blocks of time for the preschool. Only six non-staff 
             <h3>
                 <span class="resource_name">St. Vincent de Paul - Eugene Service Station</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">450 Highway 99 North, Eugene, 97402</span>
@@ -228,6 +252,21 @@ COVID Update: Two separate blocks of time for the preschool. Only six non-staff 
         </div>
     
         <h2>Camp Support</h2>
+        <div class="resource">
+            <h3>
+                <span class="resource_name">Carry it Forward</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
+            </h3>
+            <p class="resource_contact">
+                <span class="resource_address">3692 Hickory Ave</span>
+                \t\
+                <span class="resource_phone">(541) 654-0139</span>
+            </p>
+            <p class="resource_description">Carry It Forward is a 501(c)3 that serves unhoused people in Lane County, Oregon, with a primary concentration in Eugene, Springfield, and rural areas in East Lane County. </p>
+            <p class="resource_hours">24/7</p>
+            <p class="resource_url">https://www.carryitforward.net/</p>
+        </div>
         <div class="resource">
             <h3>
                 <span class="resource_name">Community Outreach through Radical Empowerment (CORE)</span>
@@ -331,7 +370,7 @@ COVID update: Mobile units for ultrasounds not available.</p>
             <h3>
                 <span class="resource_name">Better Living Center</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">85134 Hwy 101, Florence, 97439</span>
@@ -360,8 +399,8 @@ COVID update: Mobile units for ultrasounds not available.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Eugene Mission</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1542 W 1st Ave, Eugene, 97402</span>
@@ -383,8 +422,8 @@ Free haircuts are available, please call for the schedule. Clothing is available
         <div class="resource">
             <h3>
                 <span class="resource_name">First Christian Church - Helping Hand Room</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1166 Oak St, Eugene, 97401</span>
@@ -399,7 +438,7 @@ Free haircuts are available, please call for the schedule. Clothing is available
             <h3>
                 <span class="resource_name">Junction City Local Aid</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">210 E 6th Ave, Junction City, 97448</span>
@@ -433,7 +472,7 @@ COVID Update:  screening at the door. </p>
             <h3>
                 <span class="resource_name">Oakridge Westfir Family Resource Center</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">46433 Westfir Rd, Westfir, 97492</span>
@@ -496,7 +535,7 @@ The town of Westfir is just west of Oakridge.
             <h3>
                 <span class="resource_name">St. Vincent de Paul - Eugene Service Station</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">450 Highway 99 North, Eugene, 97402</span>
@@ -510,8 +549,8 @@ The town of Westfir is just west of Oakridge.
         <div class="resource">
             <h3>
                 <span class="resource_name">Triangle Food Box</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">20280 Blachly Grange Road, Blachly, 97412</span>
@@ -525,8 +564,8 @@ The town of Westfir is just west of Oakridge.
         <div class="resource">
             <h3>
                 <span class="resource_name">White Bird - Front Rooms Resource Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">341 E 12th Ave, Eugene, 97401</span>
@@ -542,8 +581,8 @@ The town of Westfir is just west of Oakridge.
         <div class="resource">
             <h3>
                 <span class="resource_name">Eugene Mission</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1542 W 1st Ave, Eugene, 97402</span>
@@ -565,8 +604,8 @@ Free haircuts are available, please call for the schedule. Clothing is available
         <div class="resource">
             <h3>
                 <span class="resource_name">First Place Family Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1995 Amazon Parkway, Eugene, 97405</span>
@@ -583,7 +622,7 @@ COVID Update: Two separate blocks of time for the preschool. Only six non-staff 
             <h3>
                 <span class="resource_name">Hosea Youth Services</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">834 Monroe St, Eugene, 97402</span>
@@ -598,7 +637,7 @@ COVID Update: Two separate blocks of time for the preschool. Only six non-staff 
             <h3>
                 <span class="resource_name">St. Vincent de Paul - Eugene Service Station</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">450 Highway 99 North, Eugene, 97402</span>
@@ -612,8 +651,8 @@ COVID Update: Two separate blocks of time for the preschool. Only six non-staff 
         <div class="resource">
             <h3>
                 <span class="resource_name">White Bird - Front Rooms Resource Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">341 E 12th Ave, Eugene, 97401</span>
@@ -646,8 +685,8 @@ COVID Update: Two separate blocks of time for the preschool. Only six non-staff 
         <div class="resource">
             <h3>
                 <span class="resource_name">Eugene Mission</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1542 W 1st Ave, Eugene, 97402</span>
@@ -689,7 +728,7 @@ COVID update: Mobile units for ultrasounds not available.</p>
             <h3>
                 <span class="resource_name">Better Living Center</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">85134 Hwy 101, Florence, 97439</span>
@@ -704,7 +743,7 @@ COVID update: Mobile units for ultrasounds not available.</p>
             <h3>
                 <span class="resource_name">Oakridge Westfir Family Resource Center</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">46433 Westfir Rd, Westfir, 97492</span>
@@ -722,7 +761,7 @@ The town of Westfir is just west of Oakridge.
             <h3>
                 <span class="resource_name">St. Vincent de Paul Social Services</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">456 Highway 99 N, Eugene, 97402</span>
@@ -738,8 +777,8 @@ Social Services provides one-time rental assistance, a food pantry, clothing, vo
         <div class="resource">
             <h3>
                 <span class="resource_name">Triangle Food Box</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">20280 Blachly Grange Road, Blachly, 97412</span>
@@ -755,8 +794,8 @@ Social Services provides one-time rental assistance, a food pantry, clothing, vo
         <div class="resource">
             <h3>
                 <span class="resource_name">Catholic Community Services Eugene Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1464 W 6th Ave, Eugene, 97402</span>
@@ -772,8 +811,8 @@ Food pantry is from 8 a.m. to noon Monday, Wednesday, and Friday. Food delivery 
         <div class="resource">
             <h3>
                 <span class="resource_name">Catholic Community Services Springfield Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1025 G St, Springfield, 97477</span>
@@ -792,8 +831,8 @@ Food delivery box for age 60+ is available for those who check in by 12 p.m.
         <div class="resource">
             <h3>
                 <span class="resource_name">Eugene Mission</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1542 W 1st Ave, Eugene, 97402</span>
@@ -833,7 +872,7 @@ COVID update: No day shelter or kitchen facilities or transitional housing.</p>
             <h3>
                 <span class="resource_name">Hosea Youth Services</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">834 Monroe St, Eugene, 97402</span>
@@ -895,8 +934,8 @@ COVID update: No day shelter or kitchen facilities or transitional housing.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Catholic Community Services Eugene Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1464 W 6th Ave, Eugene, 97402</span>
@@ -912,8 +951,8 @@ Food pantry is from 8 a.m. to noon Monday, Wednesday, and Friday. Food delivery 
         <div class="resource">
             <h3>
                 <span class="resource_name">Catholic Community Services Springfield Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1025 G St, Springfield, 97477</span>
@@ -932,8 +971,8 @@ Food delivery box for age 60+ is available for those who check in by 12 p.m.
         <div class="resource">
             <h3>
                 <span class="resource_name">Community Sharing</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1440 Birch Ave, Cottage Grove, 97424</span>
@@ -955,7 +994,7 @@ COVID Update: Masks required.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Lane County Vital Records</span>
-                <span>\l\</span>
+                <span class="resourceIcon">?</span>
                 
             </h3>
             <p class="resource_contact">
@@ -970,8 +1009,8 @@ COVID Update: Masks required.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Oregon Department of Motor Vehicles - Eugene</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">2870 W 10th Pl, Eugene, 97402</span>
@@ -987,8 +1026,8 @@ COVID update: By appointment only through the website. All patrons must be six f
         <div class="resource">
             <h3>
                 <span class="resource_name">Oregon Department of Motor Vehicles - Florence</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">2056 Hwy 101 N, Florence, 97439</span>
@@ -1004,8 +1043,8 @@ COVID Update: By appointment only through the website. All patrons must be six f
         <div class="resource">
             <h3>
                 <span class="resource_name">Oregon Department of Motor Vehicles - Springfield</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">204 N 30th St, Springfield, 97478</span>
@@ -1022,7 +1061,7 @@ COVID Update: By appointment only through the website. All patrons must be six f
             <h3>
                 <span class="resource_name">Oregon Vital Records</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">800 NE Oregon Street, Room 205, Portland 97232</span>
@@ -1055,8 +1094,8 @@ COVID update: The office is currently closed. Obtain all certificates through th
         <div class="resource">
             <h3>
                 <span class="resource_name">Bethel Branch Library</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1990 Echo Hollow Road, Eugene, 97402</span>
@@ -1117,8 +1156,8 @@ COVID Update: Reduced capacity; one-hour limit. Mask wearing required.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Eugene Public Library</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">100 W 10th Ave, Eugene, 97401</span>
@@ -1149,8 +1188,8 @@ Covid Update: Building closed for pandemic.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">First Place Family Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1995 Amazon Parkway, Eugene, 97405</span>
@@ -1197,7 +1236,7 @@ COVID Update: Two separate blocks of time for the preschool. Only six non-staff 
             <h3>
                 <span class="resource_name">Oakridge Westfir Family Resource Center</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">46433 Westfir Rd, Westfir, 97492</span>
@@ -1215,7 +1254,7 @@ The town of Westfir is just west of Oakridge.
             <h3>
                 <span class="resource_name">Sheldon Branch, Eugene Public Library</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1566 Coburg Road, Eugene, 97401</span>
@@ -1244,8 +1283,8 @@ The town of Westfir is just west of Oakridge.
         <div class="resource">
             <h3>
                 <span class="resource_name">Springfield Public Library</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">225 5th Street, Springfield, 97477</span>
@@ -1259,8 +1298,8 @@ The town of Westfir is just west of Oakridge.
         <div class="resource">
             <h3>
                 <span class="resource_name">University of Oregon Knight Library</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">501 Kincaid, Eugene, 97403</span>
@@ -1276,8 +1315,8 @@ COVID Update: Open only to UO faculty, students, and staff with current UO ID ca
         <div class="resource">
             <h3>
                 <span class="resource_name">WorkSource Lane County</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">2510 Oakmont Way, Eugene 97401</span>
@@ -1293,8 +1332,8 @@ COVID Update: Open only to UO faculty, students, and staff with current UO ID ca
         <div class="resource">
             <h3>
                 <span class="resource_name">Community Sharing</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1440 Birch Ave, Cottage Grove, 97424</span>
@@ -1316,8 +1355,8 @@ COVID Update: Masks required.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Eugene Mission</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1542 W 1st Ave, Eugene, 97402</span>
@@ -1339,8 +1378,8 @@ Free haircuts are available, please call for the schedule. Clothing is available
         <div class="resource">
             <h3>
                 <span class="resource_name">First Place Family Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1995 Amazon Parkway, Eugene, 97405</span>
@@ -1374,7 +1413,7 @@ COVID update: No day shelter or kitchen facilities or transitional housing.</p>
             <h3>
                 <span class="resource_name">Hosea Youth Services</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">834 Monroe St, Eugene, 97402</span>
@@ -1403,8 +1442,8 @@ COVID update: No day shelter or kitchen facilities or transitional housing.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Siuslaw Outreach Services</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1576 West 12th St, Florence, 97439</span>
@@ -1419,7 +1458,7 @@ COVID update: No day shelter or kitchen facilities or transitional housing.</p>
             <h3>
                 <span class="resource_name">St. Vincent de Paul - Eugene Service Station</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">450 Highway 99 North, Eugene, 97402</span>
@@ -1435,8 +1474,8 @@ COVID update: No day shelter or kitchen facilities or transitional housing.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Eugene Mission</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1542 W 1st Ave, Eugene, 97402</span>
@@ -1458,8 +1497,8 @@ Free haircuts are available, please call for the schedule. Clothing is available
         <div class="resource">
             <h3>
                 <span class="resource_name">First Place Family Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1995 Amazon Parkway, Eugene, 97405</span>
@@ -1476,7 +1515,7 @@ COVID Update: Two separate blocks of time for the preschool. Only six non-staff 
             <h3>
                 <span class="resource_name">St. Vincent de Paul - Eugene Service Station</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">450 Highway 99 North, Eugene, 97402</span>
@@ -1490,8 +1529,8 @@ COVID Update: Two separate blocks of time for the preschool. Only six non-staff 
         <div class="resource">
             <h3>
                 <span class="resource_name">White Bird - Front Rooms Resource Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">341 E 12th Ave, Eugene, 97401</span>
@@ -1542,7 +1581,7 @@ Federal and state regulations limit the Lifeline benefit to one person per house
             <h3>
                 <span class="resource_name">St. Vincent de Paul - Eugene Service Station</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">450 Highway 99 North, Eugene, 97402</span>
@@ -1556,8 +1595,8 @@ Federal and state regulations limit the Lifeline benefit to one person per house
         <div class="resource">
             <h3>
                 <span class="resource_name">White Bird - Front Rooms Resource Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">341 E 12th Ave, Eugene, 97401</span>
@@ -1573,8 +1612,8 @@ Federal and state regulations limit the Lifeline benefit to one person per house
         <div class="resource">
             <h3>
                 <span class="resource_name">Community Sharing</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1440 Birch Ave, Cottage Grove, 97424</span>
@@ -1597,7 +1636,7 @@ COVID Update: Masks required.</p>
             <h3>
                 <span class="resource_name">FISH / Trinity United Methodist Church</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">440 Maxwell Rd, Eugene, 97404</span>
@@ -1614,7 +1653,7 @@ Phone-in a request for food and pick up from 2 to 3 p.m. the same day. The build
             <h3>
                 <span class="resource_name">Junction City Local Aid</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">210 E 6th Ave, Junction City, 97448</span>
@@ -1629,7 +1668,7 @@ Phone-in a request for food and pick up from 2 to 3 p.m. the same day. The build
             <h3>
                 <span class="resource_name">St. Vincent de Paul Social Services</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">456 Highway 99 N, Eugene, 97402</span>
@@ -1646,9 +1685,24 @@ Social Services provides one-time rental assistance, a food pantry, clothing, vo
         <h2>Showers</h2>
         <div class="resource">
             <h3>
+                <span class="resource_name">Carry it Forward</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
+            </h3>
+            <p class="resource_contact">
+                <span class="resource_address">3692 Hickory Ave</span>
+                \t\
+                <span class="resource_phone">(541) 654-0139</span>
+            </p>
+            <p class="resource_description">Carry It Forward is a 501(c)3 that serves unhoused people in Lane County, Oregon, with a primary concentration in Eugene, Springfield, and rural areas in East Lane County. </p>
+            <p class="resource_hours">24/7</p>
+            <p class="resource_url">https://www.carryitforward.net/</p>
+        </div>
+        <div class="resource">
+            <h3>
                 <span class="resource_name">Community Sharing</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1440 Birch Ave, Cottage Grove, 97424</span>
@@ -1670,8 +1724,8 @@ COVID Update: Masks required.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Eugene Mission</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1542 W 1st Ave, Eugene, 97402</span>
@@ -1694,7 +1748,7 @@ Free haircuts are available, please call for the schedule. Clothing is available
             <h3>
                 <span class="resource_name">Hosea Youth Services</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">834 Monroe St, Eugene, 97402</span>
@@ -1727,8 +1781,8 @@ COVID Update:  screening at the door. </p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Siuslaw Outreach Services</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1576 West 12th St, Florence, 97439</span>
@@ -1743,7 +1797,7 @@ COVID Update:  screening at the door. </p>
             <h3>
                 <span class="resource_name">St. Vincent de Paul - Eugene Service Station</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">450 Highway 99 North, Eugene, 97402</span>
@@ -1797,8 +1851,8 @@ COVID Update:  screening at the door. </p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Oregon Department of Human Services - 11th Ave</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">2101 W 11th Ave, Eugene, 97402</span>
@@ -1816,8 +1870,8 @@ COVID Update: No computers available, no public restrooms. </p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Oregon Department of Human Services - Springfield</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1040 Harlow Rd, Springfield, 97477</span>
@@ -1833,8 +1887,8 @@ COVID Update: no computers or produce available.  Must wear masks and follow the
         <div class="resource">
             <h3>
                 <span class="resource_name">Oregon Department of Human Services - Willamette</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1899 Willamette St, Eugene, 97401</span>
@@ -1848,8 +1902,8 @@ COVID Update: no computers or produce available.  Must wear masks and follow the
         <div class="resource">
             <h3>
                 <span class="resource_name">Oregon Department of Human Services- 30th St</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">101 30th St, Springfield, 97478</span>
@@ -1865,8 +1919,8 @@ COVID Update: no computers or produce available.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Siuslaw Outreach Services</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1576 West 12th St, Florence, 97439</span>
@@ -1880,8 +1934,8 @@ COVID Update: no computers or produce available.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Womenspace - Domestic Violence Advocacy Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1577 Pearl St, 2nd Floor, Eugene, 97401</span>
@@ -1932,8 +1986,8 @@ COVID update: Mobile units for ultrasounds not available.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Catholic Community Services Eugene Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1464 W 6th Ave, Eugene, 97402</span>
@@ -1949,8 +2003,8 @@ Food pantry is from 8 a.m. to noon Monday, Wednesday, and Friday. Food delivery 
         <div class="resource">
             <h3>
                 <span class="resource_name">Catholic Community Services Springfield Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1025 G St, Springfield, 97477</span>
@@ -1969,8 +2023,8 @@ Food delivery box for age 60+ is available for those who check in by 12 p.m.
         <div class="resource">
             <h3>
                 <span class="resource_name">Family Relief Nursery</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">720 N 14th St, Cottage Grove, 97424</span>
@@ -1985,8 +2039,8 @@ Food delivery box for age 60+ is available for those who check in by 12 p.m.
         <div class="resource">
             <h3>
                 <span class="resource_name">First Place Family Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1995 Amazon Parkway, Eugene, 97405</span>
@@ -2020,7 +2074,7 @@ COVID update: No day shelter or kitchen facilities or transitional housing.</p>
             <h3>
                 <span class="resource_name">McKenzie/Blue River Family Resource Center</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">51187 Blue River Dr, Finn Rock 97488</span>
@@ -2036,7 +2090,7 @@ COVID update: No day shelter or kitchen facilities or transitional housing.</p>
             <h3>
                 <span class="resource_name">Oakridge Westfir Family Resource Center</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">46433 Westfir Rd, Westfir, 97492</span>
@@ -2053,8 +2107,8 @@ The town of Westfir is just west of Oakridge.
         <div class="resource">
             <h3>
                 <span class="resource_name">Oregon Department of Human Services - 11th Ave</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">2101 W 11th Ave, Eugene, 97402</span>
@@ -2072,8 +2126,8 @@ COVID Update: No computers available, no public restrooms. </p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Oregon Department of Human Services - Cottage Grove</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">305 Coop Ct, Cottage Grove, 97424</span>
@@ -2087,8 +2141,8 @@ COVID Update: No computers available, no public restrooms. </p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Oregon Department of Human Services - Florence</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">3180 Hwy 101 N, Florence, 97439</span>
@@ -2102,8 +2156,8 @@ COVID Update: No computers available, no public restrooms. </p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Oregon Department of Human Services - Springfield</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1040 Harlow Rd, Springfield, 97477</span>
@@ -2119,8 +2173,8 @@ COVID Update: no computers or produce available.  Must wear masks and follow the
         <div class="resource">
             <h3>
                 <span class="resource_name">Oregon Department of Human Services - Willamette</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1899 Willamette St, Eugene, 97401</span>
@@ -2134,8 +2188,8 @@ COVID Update: no computers or produce available.  Must wear masks and follow the
         <div class="resource">
             <h3>
                 <span class="resource_name">Oregon Department of Human Services- 30th St</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">101 30th St, Springfield, 97478</span>
@@ -2166,8 +2220,8 @@ COVID Update: no computers or produce available.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Relief Nursery - Eugene</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1720 W 25th Ave, Eugene, 97405</span>
@@ -2183,8 +2237,8 @@ COVID Update: No on-site appointments.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Relief Nursery - Springfield</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">850 S 42nd St, Springfield, 97478</span>
@@ -2201,7 +2255,7 @@ COVID Update: No on-site appointments.</p>
             <h3>
                 <span class="resource_name">Sacred Heart - Pregnancy and Parenting Education</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">3333 Riverbend Dr, Springfield, 97477</span>
@@ -2233,7 +2287,7 @@ COVID Update: Register for classes online or by phone. Bring a receipt when paid
             <h3>
                 <span class="resource_name">White Bird - Counseling Program</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">341 E 12th Ave, Eugene, 97401</span>
@@ -2250,7 +2304,7 @@ COVID Update: Register for classes online or by phone. Bring a receipt when paid
             <h3>
                 <span class="resource_name">Community Veterinary Center</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">470 Highway 99 N, Eugene, 97402</span>
@@ -2310,8 +2364,8 @@ COVID Update: Masks required.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Jewish Federation of Lane County - Jewish Family Services</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">Inside Temple Beth Israel, 1175 E 29th Ave, Eugene, 97403</span>
@@ -2360,7 +2414,7 @@ English and Hebrew spoken.</p>
             <h3>
                 <span class="resource_name">LGBTQ Youth Group</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">2700 Hilyard, Eugene, 97405</span>
@@ -2423,8 +2477,8 @@ COVID Update: Social groups meet on Zoom. </p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Centro Latino Americano</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">44 W 5th Ave, Eugene, 97402</span>
@@ -2438,8 +2492,8 @@ COVID Update: Social groups meet on Zoom. </p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Emergence Addiction and Behavioral Therapies - Juntos</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">374 Q Street, Springfield, 97477</span>
@@ -2476,8 +2530,8 @@ COVID Update: Social groups meet on Zoom. </p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Lane Community College Financial Aid</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">4000 E 30th Ave, Building 1, Eugene, 97405</span>
@@ -2491,8 +2545,8 @@ COVID Update: Social groups meet on Zoom. </p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Lane Community College GED Preparation</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">4000 E 30th Ave, Building 11, Eugene, 97405</span>
@@ -2532,8 +2586,8 @@ Emergency food bags (with two days of food provided) are available Monday to Fri
         <div class="resource">
             <h3>
                 <span class="resource_name">Catholic Community Services Eugene Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1464 W 6th Ave, Eugene, 97402</span>
@@ -2549,8 +2603,8 @@ Food pantry is from 8 a.m. to noon Monday, Wednesday, and Friday. Food delivery 
         <div class="resource">
             <h3>
                 <span class="resource_name">Catholic Community Services Springfield Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1025 G St, Springfield, 97477</span>
@@ -2569,8 +2623,8 @@ Food delivery box for age 60+ is available for those who check in by 12 p.m.
         <div class="resource">
             <h3>
                 <span class="resource_name">Community Sharing</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1440 Birch Ave, Cottage Grove, 97424</span>
@@ -2592,8 +2646,8 @@ COVID Update: Masks required.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Creswell Food Pantry</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">364 Cobalt Ln, Creswell, Oregon 97426</span>
@@ -2626,8 +2680,8 @@ To-go meals available Thursdays at 6:15 p.m. and Sundays at 8:30 a.m.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Eugene Faith Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1410 West 13th Ave, Eugene, 97402</span>
@@ -2642,7 +2696,7 @@ To-go meals available Thursdays at 6:15 p.m. and Sundays at 8:30 a.m.</p>
             <h3>
                 <span class="resource_name">FISH / Trinity United Methodist Church</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">440 Maxwell Rd, Eugene, 97404</span>
@@ -2658,7 +2712,7 @@ Phone-in a request for food and pick up from 2 to 3 p.m. the same day. The build
         <div class="resource">
             <h3>
                 <span class="resource_name">FOOD for Lane County</span>
-                <span>\l\</span>
+                <span class="resourceIcon">?</span>
                 
             </h3>
             <p class="resource_contact">
@@ -2675,8 +2729,8 @@ COVID Update: All programs still operating—call or access website for any change
         <div class="resource">
             <h3>
                 <span class="resource_name">Florence Food Share</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">2190 Spruce St, Florence, 97439</span>
@@ -2691,7 +2745,7 @@ COVID Update: All programs still operating—call or access website for any change
             <h3>
                 <span class="resource_name">God&#39;s Food Box</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">7373 8th St, Junction City, 97448</span>
@@ -2705,8 +2759,8 @@ COVID Update: All programs still operating—call or access website for any change
         <div class="resource">
             <h3>
                 <span class="resource_name">Goldson&#39;s Grange</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">23479 Hwy 36, Cheshire, 97419</span>
@@ -2721,7 +2775,7 @@ COVID Update: All programs still operating—call or access website for any change
             <h3>
                 <span class="resource_name">Junction City Local Aid</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">210 E 6th Ave, Junction City, 97448</span>
@@ -2817,7 +2871,7 @@ COVID Update: During the pandemic, they offer non-contact drive-through.</p>
             <h3>
                 <span class="resource_name">Mannahouse - Daily Bread</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">89780 N Game Farm Road, Eugene, 97408</span>
@@ -2849,7 +2903,7 @@ COVID Update: Maximum of five shoppers inside, five waiting on porch. All others
             <h3>
                 <span class="resource_name">Oakridge Food Pantry at the Willamette Activity Center</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">47674 School St, Oakridge, 97463</span>
@@ -2865,7 +2919,7 @@ COVID Update: Maximum of five shoppers inside, five waiting on porch. All others
             <h3>
                 <span class="resource_name">Oakridge Westfir Family Resource Center</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">46433 Westfir Rd, Westfir, 97492</span>
@@ -2883,7 +2937,7 @@ The town of Westfir is just west of Oakridge.
             <h3>
                 <span class="resource_name">Our Redeemer Lutheran Church Food Pantry</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">255 Maxwell Road, Eugene, 97404</span>
@@ -2943,8 +2997,8 @@ The town of Westfir is just west of Oakridge.
         <div class="resource">
             <h3>
                 <span class="resource_name">Salvation Army</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">640 W 7th Ave, Eugene, 97402</span>
@@ -2973,7 +3027,7 @@ The town of Westfir is just west of Oakridge.
         <div class="resource">
             <h3>
                 <span class="resource_name">St. Vincent de Paul Social Services</span>
-                <span>\l\</span>
+                <span class="resourceIcon">?</span>
                 
             </h3>
             <p class="resource_contact">
@@ -3020,8 +3074,8 @@ Social Services provides one-time rental assistance, a food pantry, clothing, vo
         <div class="resource">
             <h3>
                 <span class="resource_name">Triangle Food Box</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">20280 Blachly Grange Road, Blachly, 97412</span>
@@ -3036,7 +3090,7 @@ Social Services provides one-time rental assistance, a food pantry, clothing, vo
             <h3>
                 <span class="resource_name">Up River Food Pantry</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">37895 Row River Rd, Dorena, 97434</span>
@@ -3126,7 +3180,7 @@ Social Services provides one-time rental assistance, a food pantry, clothing, vo
             <h3>
                 <span class="resource_name">Waste to Taste</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1300 Irvington Dr, Eugene, 97404</span>
@@ -3344,7 +3398,7 @@ COVID Update: All meals are take-out. </p>
             <h3>
                 <span class="resource_name">Community Kitchen at the Trinity Lutheran Church</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">675 S 7th St, Cottage Grove, 97424</span>
@@ -3424,8 +3478,8 @@ To-go meals available Thursdays at 6:15 p.m. and Sundays at 8:30 a.m.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Eugene Mission</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1542 W 1st Ave, Eugene, 97402</span>
@@ -3448,7 +3502,7 @@ Free haircuts are available, please call for the schedule. Clothing is available
             <h3>
                 <span class="resource_name">Eugene Seventh Day Adventist Church</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1275 Polk St, Eugene, 97402</span>
@@ -3477,8 +3531,8 @@ Free haircuts are available, please call for the schedule. Clothing is available
         <div class="resource">
             <h3>
                 <span class="resource_name">Fern Ridge Service Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">25035 W Broadway Ave, Veneta, 97487</span>
@@ -3494,8 +3548,8 @@ COVID Update: Hours may vary during the pandemic.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">First Christian Church - Sunday Breakfast</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1166 Oak St, Eugene, 97401</span>
@@ -3509,8 +3563,8 @@ COVID Update: Hours may vary during the pandemic.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">First Place Family Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1995 Amazon Parkway, Eugene, 97405</span>
@@ -3527,7 +3581,7 @@ COVID Update: Two separate blocks of time for the preschool. Only six non-staff 
             <h3>
                 <span class="resource_name">Food Not Bombs</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">Park Blocks across from the courthouse in Eugene</span>
@@ -3542,7 +3596,7 @@ COVID Update: Two separate blocks of time for the preschool. Only six non-staff 
             <h3>
                 <span class="resource_name">Hosea Youth Services</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">834 Monroe St, Eugene, 97402</span>
@@ -3575,7 +3629,7 @@ COVID Update:  screening at the door. </p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Meals on Wheels - Creswell</span>
-                <span>\l\</span>
+                <span class="resourceIcon">?</span>
                 
             </h3>
             <p class="resource_contact">
@@ -3605,8 +3659,8 @@ COVID Update:  screening at the door. </p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Meals on Wheels - Florence</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1570 Kingwood St, Florence, 97439</span>
@@ -3651,7 +3705,7 @@ COVID Update:  screening at the door. </p>
             <h3>
                 <span class="resource_name">New Hope Baptist Church</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">597 S Front St, Creswell, 97426</span>
@@ -3666,7 +3720,7 @@ COVID Update:  screening at the door. </p>
             <h3>
                 <span class="resource_name">Senior Meals - Olive Plaza</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1135 Olive St, Eugene, 97402</span>
@@ -3741,7 +3795,7 @@ COVID Update:  screening at the door. </p>
             <h3>
                 <span class="resource_name">St. Vincent de Paul - Eugene Service Station</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">450 Highway 99 North, Eugene, 97402</span>
@@ -3773,7 +3827,7 @@ COVID Update: Food to go provided</p>
             <h3>
                 <span class="resource_name">Valley United Methodist Church</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">25133 E Broadway Ave, Veneta, 97487</span>
@@ -3812,8 +3866,8 @@ COVID Update: Meals to go; limited capacity; please check in the church early.</
         <div class="resource">
             <h3>
                 <span class="resource_name">Buckley&#39;s Sobering Services</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">605 W 4th Ave, Eugene, 97402</span>
@@ -3920,7 +3974,7 @@ COVID Update: The center is open, and staff is available but please don&#39;t en
             <h3>
                 <span class="resource_name">Center for Family Development Outpatient Substance Use Recovery</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">240 E 12th Ave, Eugene OR 97401</span>
@@ -3954,7 +4008,7 @@ COVID update: Masks required.</p>
             <h3>
                 <span class="resource_name">Emergence Addiction and Behavior Therapies Counseling Program</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">2149 Centennial Plaza, Ste 4, Eugene, 97401</span>
@@ -3970,8 +4024,8 @@ COVID Update: Tele-health and Zoom available.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Lane County Methadone Treatment Program</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">151 W 7th Ave, Rm 163, Eugene, 97401</span>
@@ -3986,8 +4040,8 @@ COVID Update: Tele-health and Zoom available.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Laurel Hill Center - Psychiatric Rehabilitation Services</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">2145 Centennial Plaza, Eugene, 97401</span>
@@ -4001,8 +4055,8 @@ COVID Update: Tele-health and Zoom available.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Laurel Hill Center - Psychiatric Rehabilitation Services</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">210 E 6th Ave, Junction City, 97448</span>
@@ -4053,7 +4107,7 @@ COVID Update: Some groups are returning to physical meetings, but others are sti
             <h3>
                 <span class="resource_name">ODI Clinic: Adolescent &amp; Family Services</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">10 Shelton McMurphey Blvd (4th and Pearl), Eugene, 97401</span>
@@ -4067,8 +4121,8 @@ COVID Update: Some groups are returning to physical meetings, but others are sti
         <div class="resource">
             <h3>
                 <span class="resource_name">ODI Clinic: Centro Latino Americano</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">944 W 5th Ave, Eugene, 97402</span>
@@ -4082,8 +4136,8 @@ COVID Update: Some groups are returning to physical meetings, but others are sti
         <div class="resource">
             <h3>
                 <span class="resource_name">Serenity Lane</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">4211 West 11th Ave, Eugene, 97402</span>
@@ -4097,8 +4151,8 @@ COVID Update: Some groups are returning to physical meetings, but others are sti
         <div class="resource">
             <h3>
                 <span class="resource_name">Serenity Lane - Residential Treatment Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">91150 Coburg Industrial Way, Coburg, 97408</span>
@@ -4112,8 +4166,8 @@ COVID Update: Some groups are returning to physical meetings, but others are sti
         <div class="resource">
             <h3>
                 <span class="resource_name">South Lane Mental Health</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1345 Birch Ave, Cottage Grove, 97424</span>
@@ -4128,7 +4182,7 @@ COVID Update: Some groups are returning to physical meetings, but others are sti
             <h3>
                 <span class="resource_name">South Lane Mental Health Recovery Center</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">75 S 5th St, Cottage Grove, 97424</span>
@@ -4143,7 +4197,7 @@ COVID Update: Some groups are returning to physical meetings, but others are sti
             <h3>
                 <span class="resource_name">White Bird - Chrysalis Behavioral Health Outpatient Services</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">350 E 11th Ave, Eugene, 97401</span>
@@ -4157,8 +4211,8 @@ COVID Update: Some groups are returning to physical meetings, but others are sti
         <div class="resource">
             <h3>
                 <span class="resource_name">Willamette Family Inc. - Rapid Access Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">195 W 12th, Eugene, 97401 (2nd floor)</span>
@@ -4174,7 +4228,7 @@ COVID Update: Some groups are returning to physical meetings, but others are sti
         <div class="resource">
             <h3>
                 <span class="resource_name">Bushnell University - Counseling Center</span>
-                <span>\l\</span>
+                <span class="resourceIcon">?</span>
                 
             </h3>
             <p class="resource_contact">
@@ -4222,7 +4276,7 @@ COVID Update: Offering in-person and tele-health counseling (depends on current 
             <h3>
                 <span class="resource_name">Center for Community Counseling</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1465 Coburg Rd, Eugene, 97401</span>
@@ -4237,7 +4291,7 @@ COVID Update: Offering in-person and tele-health counseling (depends on current 
             <h3>
                 <span class="resource_name">Center for Family Development - North Building</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">240 E 12th Ave, Eugene, 97401</span>
@@ -4254,7 +4308,7 @@ COVID Update: Therapy is over Zoom. All information is subject to change during 
             <h3>
                 <span class="resource_name">Early Assessment and Support Alliance (EASA)</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1200 Hilyard St, Ste 570, Eugene, 97401</span>
@@ -4269,7 +4323,7 @@ COVID Update: Therapy is over Zoom. All information is subject to change during 
             <h3>
                 <span class="resource_name">Emergence Addiction and Behavior Therapies Counseling Program</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">2149 Centennial Plaza, Ste 4, Eugene, 97401</span>
@@ -4286,7 +4340,7 @@ COVID Update: Tele-health and Zoom available.</p>
             <h3>
                 <span class="resource_name">Eugene Vet Center</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">190 East 11th Ave, Eugene, 97401</span>
@@ -4303,8 +4357,8 @@ COVID Update: In person initial appointments and then scheduled on a case-by-cas
         <div class="resource">
             <h3>
                 <span class="resource_name">Laurel Hill Center - Psychiatric Rehabilitation Services</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">2145 Centennial Plaza, Eugene, 97401</span>
@@ -4318,8 +4372,8 @@ COVID Update: In person initial appointments and then scheduled on a case-by-cas
         <div class="resource">
             <h3>
                 <span class="resource_name">Laurel Hill Center - Psychiatric Rehabilitation Services</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">210 E 6th Ave, Junction City, 97448</span>
@@ -4333,8 +4387,8 @@ COVID Update: In person initial appointments and then scheduled on a case-by-cas
         <div class="resource">
             <h3>
                 <span class="resource_name">Looking Glass Community Services</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">260 E 11th Ave, Eugene, 97401</span>
@@ -4363,7 +4417,7 @@ COVID Update: In person initial appointments and then scheduled on a case-by-cas
         <div class="resource">
             <h3>
                 <span class="resource_name">National Alliance on Mental Illness Lane County (NAMI)</span>
-                <span>\l\</span>
+                <span class="resourceIcon">?</span>
                 
             </h3>
             <p class="resource_contact">
@@ -4394,7 +4448,7 @@ COVID Update: In person initial appointments and then scheduled on a case-by-cas
         <div class="resource">
             <h3>
                 <span class="resource_name">SASS - Sexual Assault Support Services</span>
-                <span>\l\</span>
+                <span class="resourceIcon">?</span>
                 
             </h3>
             <p class="resource_contact">
@@ -4427,8 +4481,8 @@ COVID Update: In-person services are on hold, support groups are offered online.
         <div class="resource">
             <h3>
                 <span class="resource_name">South Lane Mental Health</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1345 Birch Ave, Cottage Grove, 97424</span>
@@ -4443,7 +4497,7 @@ COVID Update: In-person services are on hold, support groups are offered online.
             <h3>
                 <span class="resource_name">South Lane Mental Health Recovery Center</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">75 S 5th St, Cottage Grove, 97424</span>
@@ -4457,7 +4511,7 @@ COVID Update: In-person services are on hold, support groups are offered online.
         <div class="resource">
             <h3>
                 <span class="resource_name">Veterans Crisis Hotline</span>
-                <span>\l\</span>
+                <span class="resourceIcon">?</span>
                 
             </h3>
             <p class="resource_contact">
@@ -4473,7 +4527,7 @@ COVID Update: In-person services are on hold, support groups are offered online.
             <h3>
                 <span class="resource_name">White Bird - Chrysalis Behavioral Health Outpatient Services</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">350 E 11th Ave, Eugene, 97401</span>
@@ -4488,7 +4542,7 @@ COVID Update: In-person services are on hold, support groups are offered online.
             <h3>
                 <span class="resource_name">White Bird - Counseling Program</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">341 E 12th Ave, Eugene, 97401</span>
@@ -4502,8 +4556,8 @@ COVID Update: In-person services are on hold, support groups are offered online.
         <div class="resource">
             <h3>
                 <span class="resource_name">Willamette Family Inc. - Rapid Access Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">195 W 12th, Eugene, 97401 (2nd floor)</span>
@@ -4517,8 +4571,8 @@ COVID Update: In-person services are on hold, support groups are offered online.
         <div class="resource">
             <h3>
                 <span class="resource_name">Womenspace - Domestic Violence Advocacy Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1577 Pearl St, 2nd Floor, Eugene, 97401</span>
@@ -4537,8 +4591,8 @@ COVID Update: Drop-in service is currently not available, but mobile advocates a
         <div class="resource">
             <h3>
                 <span class="resource_name">Lane Community College Dental Clinic</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">2460 Willamette St, Eugene, 97405</span>
@@ -4552,8 +4606,8 @@ COVID Update: Drop-in service is currently not available, but mobile advocates a
         <div class="resource">
             <h3>
                 <span class="resource_name">White Bird - Community Dental Clinic</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1415 Pearl St, Eugene, 97401</span>
@@ -4567,8 +4621,8 @@ COVID Update: Drop-in service is currently not available, but mobile advocates a
         <div class="resource">
             <h3>
                 <span class="resource_name">Willamette Family Health Clinic</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">195 W 12th, Eugene, 97401 (1st floor)</span>
@@ -4719,8 +4773,8 @@ COVID Update: Drop-in service is currently not available, but mobile advocates a
         <div class="resource">
             <h3>
                 <span class="resource_name">HIV Alliance, Inc. - HIV and Hepatitis C Testing</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1195A City View St, Eugene, 97402</span>
@@ -4734,8 +4788,8 @@ COVID Update: Drop-in service is currently not available, but mobile advocates a
         <div class="resource">
             <h3>
                 <span class="resource_name">Integrated Health Clinics of Eugene</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">715 Lincoln St, Eugene, 97401</span>
@@ -4823,8 +4877,8 @@ For locations throughout Lane County for disposing your sharps disposal containe
         <div class="resource">
             <h3>
                 <span class="resource_name">Community Health Clinics of Lane County - Eugene, Chambers St</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">Brookside Clinic, 1680 Chambers St, Suite 103 Eugene, 97402</span>
@@ -4840,8 +4894,8 @@ COVID Update: Phone visits are available. Masks are required and all visitors an
         <div class="resource">
             <h3>
                 <span class="resource_name">Community Health Clinics of Lane County - Eugene, Green Acre Rd</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">Delta Oaks Clinic, 1022 Green Acre Rd Eugene, 97408</span>
@@ -4857,8 +4911,8 @@ COVID Update: Phone visits are available. Masks are required and all visitors an
         <div class="resource">
             <h3>
                 <span class="resource_name">Community Health Clinics of Lane County - Eugene, MLK Jr Blvd</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">LCBH Primary Care, 2411 Martin Luther King Jr Blvd, Eugene, 97401</span>
@@ -4874,8 +4928,8 @@ COVID Update: Phone visits are available. Masks are required and all visitors an
         <div class="resource">
             <h3>
                 <span class="resource_name">Community Health Clinics of Lane County - Eugene, W 7th</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">Charnelton Health Clinic, 151 W 7th Ave, #100 Eugene, 97401</span>
@@ -4891,8 +4945,8 @@ COVID Update: Phone visits are available. Masks are required and all visitors an
         <div class="resource">
             <h3>
                 <span class="resource_name">Community Health Clinics of Lane County - Springfield, 10th St</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">Springfield Schools Health Center, 1050 10th St, Springfield, 97477</span>
@@ -4908,8 +4962,8 @@ COVID Update: Phone visits are available. Masks are required and all visitors an
         <div class="resource">
             <h3>
                 <span class="resource_name">Community Health Clinics of Lane County - Springfield, Olympic St</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">Riverstone Clinic, 2073 Olympic St, Springfield, 97477</span>
@@ -4925,8 +4979,8 @@ COVID Update: Phone visits are available. Masks are required and all visitors an
         <div class="resource">
             <h3>
                 <span class="resource_name">Dexter Clinic</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">38843 Dexter Rd, Dexter, 97431</span>
@@ -4944,7 +4998,7 @@ COVID Update: Symptom check before entry. No visitors except those accompanying 
             <h3>
                 <span class="resource_name">Eugene VA Heathcare Center</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">3355 Chad Dr, Eugene, 97408</span>
@@ -4958,8 +5012,8 @@ COVID Update: Symptom check before entry. No visitors except those accompanying 
         <div class="resource">
             <h3>
                 <span class="resource_name">Integrated Health Clinics of Eugene</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">715 Lincoln St, Eugene, 97401</span>
@@ -4974,7 +5028,7 @@ COVID Update: Symptom check before entry. No visitors except those accompanying 
             <h3>
                 <span class="resource_name">Lane County Public Health Services</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">151 W 7th Ave #310, Eugene, 97401</span>
@@ -4988,8 +5042,8 @@ COVID Update: Symptom check before entry. No visitors except those accompanying 
         <div class="resource">
             <h3>
                 <span class="resource_name">McKenzie-Willamette Medical Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1460 G St, Springfield, 97477</span>
@@ -5026,8 +5080,8 @@ S.A.N.T.A. &amp; Silver Tree
         <div class="resource">
             <h3>
                 <span class="resource_name">Occupy Medical</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1717 Centennial Blvd, Springfield, 97477 — Suites 4 and 7</span>
@@ -5041,8 +5095,8 @@ S.A.N.T.A. &amp; Silver Tree
         <div class="resource">
             <h3>
                 <span class="resource_name">Peace Harbor Hospital - Home Care Services</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">400 9th St, Florence, 97439</span>
@@ -5117,7 +5171,7 @@ S.A.N.T.A. &amp; Silver Tree
             <h3>
                 <span class="resource_name">PeaceHealth Sacred Heart Riverbend</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">3333 Riverbend Dr, Springfield, 97477</span>
@@ -5131,8 +5185,8 @@ S.A.N.T.A. &amp; Silver Tree
         <div class="resource">
             <h3>
                 <span class="resource_name">PeaceHealth Sacred Heart Univ. District</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1255 Hilyard St, Eugene, 97401</span>
@@ -5146,8 +5200,8 @@ S.A.N.T.A. &amp; Silver Tree
         <div class="resource">
             <h3>
                 <span class="resource_name">Peacehealth Medical Group - Cottage Grove Community Hospital and Clinics</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1515 Village Dr, Cottage Grove, 97424</span>
@@ -5192,7 +5246,7 @@ S.A.N.T.A. &amp; Silver Tree
             <h3>
                 <span class="resource_name">Volunteers in Medicine</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">2260 Marcola Rd, Springfield, 97477</span>
@@ -5221,8 +5275,8 @@ S.A.N.T.A. &amp; Silver Tree
         <div class="resource">
             <h3>
                 <span class="resource_name">White Bird - Medical Clinic</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1400 Mill St, Eugene, 97401</span>
@@ -5236,8 +5290,8 @@ S.A.N.T.A. &amp; Silver Tree
         <div class="resource">
             <h3>
                 <span class="resource_name">Willamette Family Health Clinic</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">195 W 12th, Eugene, 97401 (1st floor)</span>
@@ -5573,8 +5627,8 @@ Harm Reduction Distribution (HRD) is a low barrier program that creates access t
         <div class="resource">
             <h3>
                 <span class="resource_name">White Bird - Front Rooms Resource Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">341 E 12th Ave, Eugene, 97401</span>
@@ -5605,8 +5659,8 @@ Harm Reduction Distribution (HRD) is a low barrier program that creates access t
         <div class="resource">
             <h3>
                 <span class="resource_name">Catholic Community Services Eugene Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1464 W 6th Ave, Eugene, 97402</span>
@@ -5622,8 +5676,8 @@ Food pantry is from 8 a.m. to noon Monday, Wednesday, and Friday. Food delivery 
         <div class="resource">
             <h3>
                 <span class="resource_name">Catholic Community Services Springfield Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1025 G St, Springfield, 97477</span>
@@ -5642,8 +5696,8 @@ Food delivery box for age 60+ is available for those who check in by 12 p.m.
         <div class="resource">
             <h3>
                 <span class="resource_name">Oregon Department of Human Services - 11th Ave</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">2101 W 11th Ave, Eugene, 97402</span>
@@ -5661,8 +5715,8 @@ COVID Update: No computers available, no public restrooms. </p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Oregon Department of Human Services - Springfield</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1040 Harlow Rd, Springfield, 97477</span>
@@ -5678,8 +5732,8 @@ COVID Update: no computers or produce available.  Must wear masks and follow the
         <div class="resource">
             <h3>
                 <span class="resource_name">Oregon Department of Human Services - Willamette</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1899 Willamette St, Eugene, 97401</span>
@@ -5693,8 +5747,8 @@ COVID Update: no computers or produce available.  Must wear masks and follow the
         <div class="resource">
             <h3>
                 <span class="resource_name">Oregon Department of Human Services- 30th St</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">101 30th St, Springfield, 97478</span>
@@ -5725,8 +5779,8 @@ COVID Update: no computers or produce available.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Senior &amp; Disability Services </span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1015 Willamette St, Eugene, 97401</span>
@@ -5755,8 +5809,8 @@ COVID Update: no computers or produce available.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Willamette Family Health Clinic</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">195 W 12th, Eugene, 97401 (1st floor)</span>
@@ -5772,8 +5826,8 @@ COVID Update: no computers or produce available.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Community Sharing</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1440 Birch Ave, Cottage Grove, 97424</span>
@@ -5796,7 +5850,7 @@ COVID Update: Masks required.</p>
             <h3>
                 <span class="resource_name">FISH / Trinity United Methodist Church</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">440 Maxwell Rd, Eugene, 97404</span>
@@ -5812,8 +5866,8 @@ Phone-in a request for food and pick up from 2 to 3 p.m. the same day. The build
         <div class="resource">
             <h3>
                 <span class="resource_name">Fern Ridge Service Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">25035 W Broadway Ave, Veneta, 97487</span>
@@ -5830,7 +5884,7 @@ COVID Update: Hours may vary during the pandemic.</p>
             <h3>
                 <span class="resource_name">Junction City Local Aid</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">210 E 6th Ave, Junction City, 97448</span>
@@ -5844,8 +5898,8 @@ COVID Update: Hours may vary during the pandemic.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Siuslaw Outreach Services</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1576 West 12th St, Florence, 97439</span>
@@ -5860,7 +5914,7 @@ COVID Update: Hours may vary during the pandemic.</p>
             <h3>
                 <span class="resource_name">St. Vincent de Paul Social Services</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">456 Highway 99 N, Eugene, 97402</span>
@@ -5925,8 +5979,8 @@ COVID update: Mobile units for ultrasounds not available.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Community Health Clinics of Lane County - Eugene, Chambers St</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">Brookside Clinic, 1680 Chambers St, Suite 103 Eugene, 97402</span>
@@ -5942,8 +5996,8 @@ COVID Update: Phone visits are available. Masks are required and all visitors an
         <div class="resource">
             <h3>
                 <span class="resource_name">Community Health Clinics of Lane County - Eugene, Green Acre Rd</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">Delta Oaks Clinic, 1022 Green Acre Rd Eugene, 97408</span>
@@ -5959,8 +6013,8 @@ COVID Update: Phone visits are available. Masks are required and all visitors an
         <div class="resource">
             <h3>
                 <span class="resource_name">Community Health Clinics of Lane County - Eugene, MLK Jr Blvd</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">LCBH Primary Care, 2411 Martin Luther King Jr Blvd, Eugene, 97401</span>
@@ -5976,8 +6030,8 @@ COVID Update: Phone visits are available. Masks are required and all visitors an
         <div class="resource">
             <h3>
                 <span class="resource_name">Community Health Clinics of Lane County - Eugene, W 7th</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">Charnelton Health Clinic, 151 W 7th Ave, #100 Eugene, 97401</span>
@@ -5993,8 +6047,8 @@ COVID Update: Phone visits are available. Masks are required and all visitors an
         <div class="resource">
             <h3>
                 <span class="resource_name">Community Health Clinics of Lane County - Springfield, 10th St</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">Springfield Schools Health Center, 1050 10th St, Springfield, 97477</span>
@@ -6010,8 +6064,8 @@ COVID Update: Phone visits are available. Masks are required and all visitors an
         <div class="resource">
             <h3>
                 <span class="resource_name">Community Health Clinics of Lane County - Springfield, Olympic St</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">Riverstone Clinic, 2073 Olympic St, Springfield, 97477</span>
@@ -6027,7 +6081,7 @@ COVID Update: Phone visits are available. Masks are required and all visitors an
         <div class="resource">
             <h3>
                 <span class="resource_name">Northwest Abortion Access Fund</span>
-                <span>\l\</span>
+                <span class="resourceIcon">?</span>
                 
             </h3>
             <p class="resource_contact">
@@ -6044,8 +6098,8 @@ You can leave a Spanish-language voicemail. Translation assistance available for
         <div class="resource">
             <h3>
                 <span class="resource_name">Planned Parenthood West Eugene Health Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">793 N Danebo, Eugene, 97402</span>
@@ -6061,8 +6115,8 @@ COVID Update: If you have COVID symptoms, call and ask for a triage nurse before
         <div class="resource">
             <h3>
                 <span class="resource_name">Planned Parenthood of Southwestern OR - Eugene</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">3579 Franklin Blvd, Eugene, 97403</span>
@@ -6080,8 +6134,8 @@ COVID Update: If you have COVID symptoms, call and ask for a triage nurse before
         <div class="resource">
             <h3>
                 <span class="resource_name">Catholic Community Services Eugene Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1464 W 6th Ave, Eugene, 97402</span>
@@ -6098,7 +6152,7 @@ Food pantry is from 8 a.m. to noon Monday, Wednesday, and Friday. Food delivery 
             <h3>
                 <span class="resource_name">Lions Clubs International - State of Oregon</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">Phone only</span>
@@ -6112,7 +6166,7 @@ Food pantry is from 8 a.m. to noon Monday, Wednesday, and Friday. Food delivery 
         <div class="resource">
             <h3>
                 <span class="resource_name">Oregon Relay </span>
-                <span>\l\</span>
+                <span class="resourceIcon">?</span>
                 
             </h3>
             <p class="resource_contact">
@@ -6127,8 +6181,8 @@ Food pantry is from 8 a.m. to noon Monday, Wednesday, and Friday. Food delivery 
         <div class="resource">
             <h3>
                 <span class="resource_name">White Bird - Front Rooms Resource Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">341 E 12th Ave, Eugene, 97401</span>
@@ -6150,7 +6204,7 @@ Food pantry is from 8 a.m. to noon Monday, Wednesday, and Friday. Food delivery 
         <div class="resource">
             <h3>
                 <span class="resource_name">211 Info</span>
-                <span>\l\</span>
+                <span class="resourceIcon">?</span>
                 
             </h3>
             <p class="resource_contact">
@@ -6186,7 +6240,7 @@ Text your zip code to 898211 (TXT211), standard messaging and data rates may app
         <div class="resource">
             <h3>
                 <span class="resource_name">Alzheimer’s Association Helpline</span>
-                <span>\l\</span>
+                <span class="resourceIcon">?</span>
                 
             </h3>
             <p class="resource_contact">
@@ -6276,8 +6330,8 @@ Text your zip code to 898211 (TXT211), standard messaging and data rates may app
         <div class="resource">
             <h3>
                 <span class="resource_name">Hourglass Community Crisis Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">71 Centennial Loop, Suite A, Eugene, OR 97401</span>
@@ -6306,7 +6360,7 @@ Text your zip code to 898211 (TXT211), standard messaging and data rates may app
         <div class="resource">
             <h3>
                 <span class="resource_name">Lines for Life - Alcohol &amp; Drug Helpline</span>
-                <span>\l\</span>
+                <span class="resourceIcon">?</span>
                 
             </h3>
             <p class="resource_contact">
@@ -6384,7 +6438,7 @@ Text your zip code to 898211 (TXT211), standard messaging and data rates may app
             <h3>
                 <span class="resource_name">National Child Abuse Hotline</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">Phone only</span>
@@ -6428,7 +6482,7 @@ Text your zip code to 898211 (TXT211), standard messaging and data rates may app
         <div class="resource">
             <h3>
                 <span class="resource_name">SAMHSA Disaster Distress Hotline</span>
-                <span>\l\</span>
+                <span class="resourceIcon">?</span>
                 
             </h3>
             <p class="resource_contact">
@@ -6503,7 +6557,7 @@ Text your zip code to 898211 (TXT211), standard messaging and data rates may app
         <div class="resource">
             <h3>
                 <span class="resource_name">Veterans Crisis Hotline</span>
-                <span>\l\</span>
+                <span class="resourceIcon">?</span>
                 
             </h3>
             <p class="resource_contact">
@@ -6518,7 +6572,7 @@ Text your zip code to 898211 (TXT211), standard messaging and data rates may app
         <div class="resource">
             <h3>
                 <span class="resource_name">Veterans Homeless Services Hotline</span>
-                <span>\l\</span>
+                <span class="resourceIcon">?</span>
                 
             </h3>
             <p class="resource_contact">
@@ -6581,7 +6635,7 @@ Translation service available. </p>
             <h3>
                 <span class="resource_name">Youth ERA</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">965 Oak Alley, Eugene, 97401</span>
@@ -6613,7 +6667,7 @@ Translation service available. </p>
         <div class="resource">
             <h3>
                 <span class="resource_name">211 Info</span>
-                <span>\l\</span>
+                <span class="resourceIcon">?</span>
                 
             </h3>
             <p class="resource_contact">
@@ -6649,7 +6703,7 @@ Text your zip code to 898211 (TXT211), standard messaging and data rates may app
         <div class="resource">
             <h3>
                 <span class="resource_name">Alzheimer’s Association Helpline</span>
-                <span>\l\</span>
+                <span class="resourceIcon">?</span>
                 
             </h3>
             <p class="resource_contact">
@@ -6715,7 +6769,7 @@ Harm Reduction Distribution (HRD) is a low barrier program that creates access t
         <div class="resource">
             <h3>
                 <span class="resource_name">FOOD for Lane County</span>
-                <span>\l\</span>
+                <span class="resourceIcon">?</span>
                 
             </h3>
             <p class="resource_contact">
@@ -6732,8 +6786,8 @@ COVID Update: All programs still operating—call or access website for any change
         <div class="resource">
             <h3>
                 <span class="resource_name">Fern Ridge Service Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">25035 W Broadway Ave, Veneta, 97487</span>
@@ -6749,8 +6803,8 @@ COVID Update: Hours may vary during the pandemic.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">First Place Family Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1995 Amazon Parkway, Eugene, 97405</span>
@@ -6843,7 +6897,7 @@ COVID Update: Call to make an appointment.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">National Alliance on Mental Illness Lane County (NAMI)</span>
-                <span>\l\</span>
+                <span class="resourceIcon">?</span>
                 
             </h3>
             <p class="resource_contact">
@@ -6859,7 +6913,7 @@ COVID Update: Call to make an appointment.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">National Clearinghouse for Alcohol &amp; Drug Information (NCADI)</span>
-                <span>\l\</span>
+                <span class="resourceIcon">?</span>
                 
             </h3>
             <p class="resource_contact">
@@ -6874,7 +6928,7 @@ COVID Update: Call to make an appointment.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">National Health Information Center</span>
-                <span>\l\</span>
+                <span class="resourceIcon">?</span>
                 
             </h3>
             <p class="resource_contact">
@@ -6890,8 +6944,8 @@ COVID Update: Call to make an appointment.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Oregon Department of Human Services - 11th Ave</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">2101 W 11th Ave, Eugene, 97402</span>
@@ -6909,7 +6963,7 @@ COVID Update: No computers available, no public restrooms. </p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Oregon Helps! Social Service Eligibility Calculator</span>
-                <span>\l\</span>
+                <span class="resourceIcon">?</span>
                 
             </h3>
             <p class="resource_contact">
@@ -6954,8 +7008,8 @@ COVID Update: No computers available, no public restrooms. </p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Senior &amp; Disability Services </span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1015 Willamette St, Eugene, 97401</span>
@@ -6986,8 +7040,8 @@ COVID Update: Social groups meet on Zoom. </p>
         <div class="resource">
             <h3>
                 <span class="resource_name">White Bird - Front Rooms Resource Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">341 E 12th Ave, Eugene, 97401</span>
@@ -7148,8 +7202,8 @@ Services are for members; dues are ten dollars a month. </p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Lane County Legal Aid - Oregon Law Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">101 E Broadway St, Suite 200, Eugene, 97401</span>
@@ -7164,7 +7218,7 @@ Services are for members; dues are ten dollars a month. </p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Oregon Law Help</span>
-                <span>\l\</span>
+                <span class="resourceIcon">?</span>
                 
             </h3>
             <p class="resource_contact">
@@ -7195,7 +7249,7 @@ Services are for members; dues are ten dollars a month. </p>
             <h3>
                 <span class="resource_name">Senior Law Services</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">Campbell Community Center, 155 High St, Eugene, 97401</span>
@@ -7213,7 +7267,7 @@ COVID Update: Fully operational by phone during the pandemic. Call to apply for 
             <h3>
                 <span class="resource_name">Senior Law Services - Cottage Grove</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">Phone only</span>
@@ -7231,7 +7285,7 @@ COVID Update: Fully operational by phone during the pandemic. Call to apply for 
             <h3>
                 <span class="resource_name">Senior Law Services - Florence</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">Phone only</span>
@@ -7296,8 +7350,8 @@ COVID Update: Resources available only by phone or send a message through the we
         <div class="resource">
             <h3>
                 <span class="resource_name">Lane County District Attorney&#39;s Office</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">125 E 8th Ave #400, Eugene, 97401</span>
@@ -7311,8 +7365,8 @@ COVID Update: Resources available only by phone or send a message through the we
         <div class="resource">
             <h3>
                 <span class="resource_name">Lane County Legal Aid - Oregon Law Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">101 E Broadway St, Suite 200, Eugene, 97401</span>
@@ -7327,7 +7381,7 @@ COVID Update: Resources available only by phone or send a message through the we
         <div class="resource">
             <h3>
                 <span class="resource_name">Oregon State Bar Referral and Information Services</span>
-                <span>\l\</span>
+                <span class="resourceIcon">?</span>
                 
             </h3>
             <p class="resource_contact">
@@ -7343,7 +7397,7 @@ COVID Update: Resources available only by phone or send a message through the we
             <h3>
                 <span class="resource_name">Senior Law Services</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">Campbell Community Center, 155 High St, Eugene, 97401</span>
@@ -7361,7 +7415,7 @@ COVID Update: Fully operational by phone during the pandemic. Call to apply for 
             <h3>
                 <span class="resource_name">Senior Law Services - Cottage Grove</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">Phone only</span>
@@ -7379,7 +7433,7 @@ COVID Update: Fully operational by phone during the pandemic. Call to apply for 
             <h3>
                 <span class="resource_name">Senior Law Services - Florence</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">Phone only</span>
@@ -7418,8 +7472,8 @@ COVID Update: Fully operational by phone during the pandemic. Call to apply for 
         <div class="resource">
             <h3>
                 <span class="resource_name">Arc of Lane County</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">4181 E St, Springfield, 97478</span>
@@ -7463,8 +7517,8 @@ COVID Update: Fully operational by phone during the pandemic. Call to apply for 
         <div class="resource">
             <h3>
                 <span class="resource_name">Oregon Department of Human Services - 11th Ave</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">2101 W 11th Ave, Eugene, 97402</span>
@@ -7482,8 +7536,8 @@ COVID Update: No computers available, no public restrooms. </p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Oregon Department of Human Services - Cottage Grove</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">305 Coop Ct, Cottage Grove, 97424</span>
@@ -7497,8 +7551,8 @@ COVID Update: No computers available, no public restrooms. </p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Oregon Department of Human Services - Florence</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">3180 Hwy 101 N, Florence, 97439</span>
@@ -7512,8 +7566,8 @@ COVID Update: No computers available, no public restrooms. </p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Oregon Department of Human Services - Springfield</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1040 Harlow Rd, Springfield, 97477</span>
@@ -7529,8 +7583,8 @@ COVID Update: no computers or produce available.  Must wear masks and follow the
         <div class="resource">
             <h3>
                 <span class="resource_name">Oregon Department of Human Services - Willamette</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1899 Willamette St, Eugene, 97401</span>
@@ -7544,8 +7598,8 @@ COVID Update: no computers or produce available.  Must wear masks and follow the
         <div class="resource">
             <h3>
                 <span class="resource_name">Oregon Department of Human Services- 30th St</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">101 30th St, Springfield, 97478</span>
@@ -7608,8 +7662,8 @@ COVID Update: no computers or produce available.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Catholic Community Services Springfield Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1025 G St, Springfield, 97477</span>
@@ -7623,8 +7677,8 @@ COVID Update: no computers or produce available.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Community Sharing</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1440 Birch Ave, Cottage Grove, 97424</span>
@@ -7661,7 +7715,7 @@ COVID Update: Masks required.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">ShelterCare</span>
-                <span>\l\</span>
+                <span class="resourceIcon">?</span>
                 
             </h3>
             <p class="resource_contact">
@@ -7676,8 +7730,8 @@ COVID Update: Masks required.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Siuslaw Outreach Services</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1576 West 12th St, Florence, 97439</span>
@@ -7692,7 +7746,7 @@ COVID Update: Masks required.</p>
             <h3>
                 <span class="resource_name">St. Vincent de Paul Social Services</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">456 Highway 99 N, Eugene, 97402</span>
@@ -7710,8 +7764,8 @@ Social Services provides one-time rental assistance, a food pantry, clothing, vo
         <div class="resource">
             <h3>
                 <span class="resource_name">Catholic Community Services Eugene Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1464 W 6th Ave, Eugene, 97402</span>
@@ -7727,8 +7781,8 @@ Food pantry is from 8 a.m. to noon Monday, Wednesday, and Friday. Food delivery 
         <div class="resource">
             <h3>
                 <span class="resource_name">Catholic Community Services Springfield Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1025 G St, Springfield, 97477</span>
@@ -7742,8 +7796,8 @@ Food pantry is from 8 a.m. to noon Monday, Wednesday, and Friday. Food delivery 
         <div class="resource">
             <h3>
                 <span class="resource_name">Community Sharing</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1440 Birch Ave, Cottage Grove, 97424</span>
@@ -7811,8 +7865,8 @@ COVID Update: Masks required.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Fern Ridge Service Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">25035 W Broadway Ave, Veneta, 97487</span>
@@ -7915,8 +7969,8 @@ S.A.N.T.A. &amp; Silver Tree
         <div class="resource">
             <h3>
                 <span class="resource_name">Siuslaw Outreach Services</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1576 West 12th St, Florence, 97439</span>
@@ -7970,7 +8024,7 @@ COVID Update: No drop ins during pandemic. Please call for assistance.
         <h3>
             <span class="resource_name">Sponsors, Inc. - Re-Entry Resource Center – Women&#39;s Assistance Program</span>
             
-            <span>\w\</span>
+            <span class="resourceIcon">?</span>
         </h3>
         <p class="resource_contact">
             <span class="resource_address">767 East 8th Ave, Eugene, 97402</span>
@@ -8187,8 +8241,8 @@ COVID Update: All meals are take-out. </p>
     <div class="resource">
         <h3>
             <span class="resource_name">Fern Ridge Service Center</span>
-            <span>\l\</span>
-            <span>\w\</span>
+            <span class="resourceIcon">?</span>
+            <span class="resourceIcon">?</span>
         </h3>
         <p class="resource_contact">
             <span class="resource_address">25035 W Broadway Ave, Veneta, 97487</span>
@@ -8221,7 +8275,7 @@ COVID Update: Hours may vary during the pandemic.</p>
     <div class="resource">
         <h3>
             <span class="resource_name">Meals on Wheels - Creswell</span>
-            <span>\l\</span>
+            <span class="resourceIcon">?</span>
             
         </h3>
         <p class="resource_contact">
@@ -8253,8 +8307,8 @@ COVID Update: Hours may vary during the pandemic.</p>
     <div class="resource">
         <h3>
             <span class="resource_name">Meals on Wheels - Florence</span>
-            <span>\l\</span>
-            <span>\w\</span>
+            <span class="resourceIcon">?</span>
+            <span class="resourceIcon">?</span>
         </h3>
         <p class="resource_contact">
             <span class="resource_address">1570 Kingwood St, Florence, 97439</span>
@@ -8344,8 +8398,8 @@ COVID Update: Phone appointments only during the pandemic, Monday to Friday, 9 a
     <div class="resource">
         <h3>
             <span class="resource_name">Oregon Department of Human Services - 11th Ave</span>
-            <span>\l\</span>
-            <span>\w\</span>
+            <span class="resourceIcon">?</span>
+            <span class="resourceIcon">?</span>
         </h3>
         <p class="resource_contact">
             <span class="resource_address">2101 W 11th Ave, Eugene, 97402</span>
@@ -8364,8 +8418,8 @@ COVID Update: No computers available, no public restrooms. </p>
     <div class="resource">
         <h3>
             <span class="resource_name">Oregon Department of Human Services - Willamette</span>
-            <span>\l\</span>
-            <span>\w\</span>
+            <span class="resourceIcon">?</span>
+            <span class="resourceIcon">?</span>
         </h3>
         <p class="resource_contact">
             <span class="resource_address">1899 Willamette St, Eugene, 97401</span>
@@ -8380,8 +8434,8 @@ COVID Update: No computers available, no public restrooms. </p>
     <div class="resource">
         <h3>
             <span class="resource_name">Oregon Department of Human Services- 30th St</span>
-            <span>\l\</span>
-            <span>\w\</span>
+            <span class="resourceIcon">?</span>
+            <span class="resourceIcon">?</span>
         </h3>
         <p class="resource_contact">
             <span class="resource_address">101 30th St, Springfield, 97478</span>
@@ -8398,8 +8452,8 @@ COVID Update: no computers or produce available.</p>
     <div class="resource">
         <h3>
             <span class="resource_name">Senior &amp; Disability Services </span>
-            <span>\l\</span>
-            <span>\w\</span>
+            <span class="resourceIcon">?</span>
+            <span class="resourceIcon">?</span>
         </h3>
         <p class="resource_contact">
             <span class="resource_address">1015 Willamette St, Eugene, 97401</span>
@@ -8415,7 +8469,7 @@ COVID Update: no computers or produce available.</p>
         <h3>
             <span class="resource_name">Senior Law Services - Cottage Grove</span>
             
-            <span>\w\</span>
+            <span class="resourceIcon">?</span>
         </h3>
         <p class="resource_contact">
             <span class="resource_address">Phone only</span>
@@ -8434,7 +8488,7 @@ COVID Update: Fully operational by phone during the pandemic. Call to apply for 
         <h3>
             <span class="resource_name">Senior Law Services - Florence</span>
             
-            <span>\w\</span>
+            <span class="resourceIcon">?</span>
         </h3>
         <p class="resource_contact">
             <span class="resource_address">Phone only</span>
@@ -8452,7 +8506,7 @@ COVID Update: Fully operational by phone during the pandemic. Call to apply for 
         <h3>
             <span class="resource_name">Senior Meals - Olive Plaza</span>
             
-            <span>\w\</span>
+            <span class="resourceIcon">?</span>
         </h3>
         <p class="resource_contact">
             <span class="resource_address">1135 Olive St, Eugene, 97402</span>
@@ -8509,8 +8563,8 @@ COVID update: No day shelter or kitchen facilities or transitional housing.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Homes For Good</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">100 W 13th Avenue, Eugene, 97401</span>
@@ -8541,8 +8595,8 @@ COVID Update: No drop in. Please call.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Siuslaw Outreach Services</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1576 West 12th St, Florence, 97439</span>
@@ -8556,8 +8610,8 @@ COVID Update: No drop in. Please call.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">South Lane Mental Health</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1345 Birch Ave, Cottage Grove, 97424</span>
@@ -8590,7 +8644,7 @@ COVID Update: No drop ins during pandemic. Please call for assistance.
             <h3>
                 <span class="resource_name">Sponsors, Inc. - Re-Entry Resource Center – Women&#39;s Assistance Program</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">767 East 8th Ave, Eugene, 97402</span>
@@ -8606,8 +8660,8 @@ COVID Update: No drop-ins during pandemic. Please call for assistance.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">St. Vincent de Paul Society</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">2890 Chad Dr, Eugene, 97408</span>
@@ -8621,8 +8675,8 @@ COVID Update: No drop-ins during pandemic. Please call for assistance.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">St. Vincent de Paul Support Services for Veteran Families</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">2890 Chad Dr, Eugene, 97408</span>
@@ -8637,9 +8691,24 @@ COVID Update: No drop-ins during pandemic. Please call for assistance.</p>
         <h2>Overnight / Short Term Shelters</h2>
         <div class="resource">
             <h3>
+                <span class="resource_name">Carry it Forward</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
+            </h3>
+            <p class="resource_contact">
+                <span class="resource_address">3692 Hickory Ave</span>
+                \t\
+                <span class="resource_phone">(541) 654-0139</span>
+            </p>
+            <p class="resource_description">Carry It Forward is a 501(c)3 that serves unhoused people in Lane County, Oregon, with a primary concentration in Eugene, Springfield, and rural areas in East Lane County. </p>
+            <p class="resource_hours">24/7</p>
+            <p class="resource_url">https://www.carryitforward.net/</p>
+        </div>
+        <div class="resource">
+            <h3>
                 <span class="resource_name">Community Supported Shelters</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1160 Grant St, Eugene, 97402</span>
@@ -8654,7 +8723,7 @@ COVID Update: No drop-ins during pandemic. Please call for assistance.</p>
             <h3>
                 <span class="resource_name">Egan Warming Centers</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">Various locations in Lane County </span>
@@ -8668,8 +8737,8 @@ COVID Update: No drop-ins during pandemic. Please call for assistance.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Eugene Mission</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1542 W 1st Ave, Eugene, 97402</span>
@@ -8691,8 +8760,8 @@ Free haircuts are available, please call for the schedule. Clothing is available
         <div class="resource">
             <h3>
                 <span class="resource_name">First Place Family Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1995 Amazon Parkway, Eugene, 97405</span>
@@ -8708,8 +8777,8 @@ COVID Update: Two separate blocks of time for the preschool. Only six non-staff 
         <div class="resource">
             <h3>
                 <span class="resource_name">Looking Glass - Station #7</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">931 W 7th Ave, Eugene, 97402</span>
@@ -8724,7 +8793,7 @@ COVID Update: Two separate blocks of time for the preschool. Only six non-staff 
             <h3>
                 <span class="resource_name">Nightingale Hosted Shelters</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">3500 Hilyard St, Eugene, 97405 </span>
@@ -8753,8 +8822,8 @@ COVID Update: Two separate blocks of time for the preschool. Only six non-staff 
         <div class="resource">
             <h3>
                 <span class="resource_name">Siuslaw Outreach Services</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1576 West 12th St, Florence, 97439</span>
@@ -8787,7 +8856,7 @@ COVID Update: No drop ins during pandemic. Please call for assistance.
             <h3>
                 <span class="resource_name">Sponsors, Inc. - Re-Entry Resource Center – Women&#39;s Assistance Program</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">767 East 8th Ave, Eugene, 97402</span>
@@ -8804,7 +8873,7 @@ COVID Update: No drop-ins during pandemic. Please call for assistance.</p>
             <h3>
                 <span class="resource_name">Valley United Methodist Church</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">25133 E Broadway Ave, Veneta, 97487</span>
@@ -8820,8 +8889,8 @@ COVID Update: Meals to go; limited capacity; please check in the church early.</
         <div class="resource">
             <h3>
                 <span class="resource_name">Womenspace</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1577 Pearl St, Suite 200, Eugene, 97401</span>
@@ -8841,7 +8910,7 @@ COVID Update: Drop-in service is currently not available but mobile advocates ar
             <h3>
                 <span class="resource_name">St. Vincent de Paul - Eugene Service Station</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">450 Highway 99 North, Eugene, 97402</span>
@@ -8872,8 +8941,8 @@ COVID Update: Drop-in service is currently not available but mobile advocates ar
         <div class="resource">
             <h3>
                 <span class="resource_name">Homes For Good</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">100 W 13th Avenue, Eugene, 97401</span>
@@ -8955,8 +9024,8 @@ COVID Update: No drop ins during pandemic. Please call for assistance.
         <div class="resource">
             <h3>
                 <span class="resource_name">St. Vincent de Paul Society</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">2890 Chad Dr, Eugene, 97408</span>
@@ -9006,8 +9075,8 @@ COVID Update: No drop ins during pandemic. Please call for assistance.
     <div class="resource">
         <h3>
             <span class="resource_name">Community Sharing</span>
-            <span>\l\</span>
-            <span>\w\</span>
+            <span class="resourceIcon">?</span>
+            <span class="resourceIcon">?</span>
         </h3>
         <p class="resource_contact">
             <span class="resource_address">1440 Birch Ave, Cottage Grove, 97424</span>
@@ -9031,7 +9100,7 @@ COVID Update: Masks required.</p>
         <h3>
             <span class="resource_name">Diamond Express Transportation Service</span>
             
-            <span>\w\</span>
+            <span class="resourceIcon">?</span>
         </h3>
         <p class="resource_contact">
             <span class="resource_address">3500 E 17th Ave, Eugene, 97403</span>
@@ -9047,7 +9116,7 @@ COVID Update: Masks required.</p>
         <h3>
             <span class="resource_name">Junction City Local Aid</span>
             
-            <span>\w\</span>
+            <span class="resourceIcon">?</span>
         </h3>
         <p class="resource_contact">
             <span class="resource_address">210 E 6th Ave, Junction City, 97448</span>
@@ -9081,7 +9150,7 @@ COVID Update: Masks required.</p>
         <h3>
             <span class="resource_name">LTD RideSource</span>
             
-            <span>\w\</span>
+            <span class="resourceIcon">?</span>
         </h3>
         <p class="resource_contact">
             <span class="resource_address">Phone only</span>
@@ -9098,8 +9167,8 @@ COVID Update: Only critical or essential trips are accepted; masks required at a
     <div class="resource">
         <h3>
             <span class="resource_name">Oregon Department of Motor Vehicles - Eugene</span>
-            <span>\l\</span>
-            <span>\w\</span>
+            <span class="resourceIcon">?</span>
+            <span class="resourceIcon">?</span>
         </h3>
         <p class="resource_contact">
             <span class="resource_address">2870 W 10th Pl, Eugene, 97402</span>
@@ -9116,8 +9185,8 @@ COVID update: By appointment only through the website. All patrons must be six f
     <div class="resource">
         <h3>
             <span class="resource_name">Oregon Department of Motor Vehicles - Springfield</span>
-            <span>\l\</span>
-            <span>\w\</span>
+            <span class="resourceIcon">?</span>
+            <span class="resourceIcon">?</span>
         </h3>
         <p class="resource_contact">
             <span class="resource_address">204 N 30th St, Springfield, 97478</span>
@@ -9134,8 +9203,8 @@ COVID Update: By appointment only through the website. All patrons must be six f
     <div class="resource">
         <h3>
             <span class="resource_name">Siuslaw Outreach Services</span>
-            <span>\l\</span>
-            <span>\w\</span>
+            <span class="resourceIcon">?</span>
+            <span class="resourceIcon">?</span>
         </h3>
         <p class="resource_contact">
             <span class="resource_address">1576 West 12th St, Florence, 97439</span>
@@ -9151,7 +9220,7 @@ COVID Update: By appointment only through the website. All patrons must be six f
         <h3>
             <span class="resource_name">South Lane Wheels</span>
             
-            <span>\w\</span>
+            <span class="resourceIcon">?</span>
         </h3>
         <p class="resource_contact">
             <span class="resource_address">1450 Birch Ave, Cottage Grove, 97424</span>
@@ -9171,7 +9240,7 @@ COVID Update: By appointment only through the website. All patrons must be six f
         <h3>
             <span class="resource_name">Access the Law</span>
             
-            <span>\w\</span>
+            <span class="resourceIcon">?</span>
         </h3>
         <p class="resource_contact">
             <span class="resource_address">245 W 13th, Eugene, 97401</span>
@@ -9205,7 +9274,7 @@ COVID Update: contact by phone only, no drop ins. </p>
         <h3>
             <span class="resource_name">Community Reintegration Service Center</span>
             
-            <span>\w\</span>
+            <span class="resourceIcon">?</span>
         </h3>
         <p class="resource_contact">
             <span class="resource_address">190 E 11th, Eugene, 97401</span>
@@ -9227,7 +9296,7 @@ The Eugene Vet Center offers the following groups, please call the Eugene Vet Ce
         <h3>
             <span class="resource_name">Eugene VA Heathcare Center</span>
             
-            <span>\w\</span>
+            <span class="resourceIcon">?</span>
         </h3>
         <p class="resource_contact">
             <span class="resource_address">3355 Chad Dr, Eugene, 97408</span>
@@ -9243,7 +9312,7 @@ The Eugene Vet Center offers the following groups, please call the Eugene Vet Ce
         <h3>
             <span class="resource_name">Eugene Vet Center</span>
             
-            <span>\w\</span>
+            <span class="resourceIcon">?</span>
         </h3>
         <p class="resource_contact">
             <span class="resource_address">190 East 11th Ave, Eugene, 97401</span>
@@ -9278,7 +9347,7 @@ COVID Update: In person initial appointments and then scheduled on a case-by-cas
         <h3>
             <span class="resource_name">Lane County Veteran Service Office</span>
             
-            <span>\w\</span>
+            <span class="resourceIcon">?</span>
         </h3>
         <p class="resource_contact">
             <span class="resource_address">151 W 7th Ave, Suite 460, Eugene, 97401</span>
@@ -9343,7 +9412,7 @@ COVID Update: Not available for in-person appointments. </p>
     <div class="resource">
         <h3>
             <span class="resource_name">PenFed Foundation</span>
-            <span>\l\</span>
+            <span class="resourceIcon">?</span>
             
         </h3>
         <p class="resource_contact">
@@ -9359,8 +9428,8 @@ COVID Update: Not available for in-person appointments. </p>
     <div class="resource">
         <h3>
             <span class="resource_name">St. Vincent de Paul Support Services for Veteran Families</span>
-            <span>\l\</span>
-            <span>\w\</span>
+            <span class="resourceIcon">?</span>
+            <span class="resourceIcon">?</span>
         </h3>
         <p class="resource_contact">
             <span class="resource_address">2890 Chad Dr, Eugene, 97408</span>
@@ -9375,7 +9444,7 @@ COVID Update: Not available for in-person appointments. </p>
     <div class="resource">
         <h3>
             <span class="resource_name">Veterans Crisis Hotline</span>
-            <span>\l\</span>
+            <span class="resourceIcon">?</span>
             
         </h3>
         <p class="resource_contact">
@@ -9391,7 +9460,7 @@ COVID Update: Not available for in-person appointments. </p>
     <div class="resource">
         <h3>
             <span class="resource_name">Veterans Homeless Services Hotline</span>
-            <span>\l\</span>
+            <span class="resourceIcon">?</span>
             
         </h3>
         <p class="resource_contact">
@@ -9422,9 +9491,24 @@ Translation service available. </p>
         <h2>Employment or Job Search</h2>
         <div class="resource">
             <h3>
+                <span class="resource_name">Carry it Forward</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
+            </h3>
+            <p class="resource_contact">
+                <span class="resource_address">3692 Hickory Ave</span>
+                \t\
+                <span class="resource_phone">(541) 654-0139</span>
+            </p>
+            <p class="resource_description">Carry It Forward is a 501(c)3 that serves unhoused people in Lane County, Oregon, with a primary concentration in Eugene, Springfield, and rural areas in East Lane County. </p>
+            <p class="resource_hours">24/7</p>
+            <p class="resource_url">https://www.carryitforward.net/</p>
+        </div>
+        <div class="resource">
+            <h3>
                 <span class="resource_name">Goodwill Industries Job Connections</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">102 30th St, Springfield, 97477</span>
@@ -9438,8 +9522,8 @@ Translation service available. </p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Goodwill Industries Job Connections</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">855 Seneca Rd, Building 1, Eugene, 97402</span>
@@ -9454,7 +9538,7 @@ Translation service available. </p>
             <h3>
                 <span class="resource_name">Hosea Youth Services</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">834 Monroe St, Eugene, 97402</span>
@@ -9468,8 +9552,8 @@ Translation service available. </p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Laurel Hill Center - Employment Services</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">2145 Centennial Plaza, Eugene, 97401</span>
@@ -9504,7 +9588,7 @@ COVID Update: No drop ins during pandemic. Please call for assistance.
             <h3>
                 <span class="resource_name">Sponsors, Inc. - Re-Entry Resource Center – Women&#39;s Assistance Program</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">767 East 8th Ave, Eugene, 97402</span>
@@ -9520,8 +9604,8 @@ COVID Update: No drop-ins during pandemic. Please call for assistance.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Vocational Rehabilitation Office - Eugene</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">2885 Chad Dr, Eugene, 97408</span>
@@ -9535,8 +9619,8 @@ COVID Update: No drop-ins during pandemic. Please call for assistance.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Vocational Rehabilitation Services (OVRS) - Springfield</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">101 30th St, Springfield, 97478</span>
@@ -9550,8 +9634,8 @@ COVID Update: No drop-ins during pandemic. Please call for assistance.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">WorkSource Lane - Florence Office</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">3180 Hwy 101 N, Florence, 97439</span>
@@ -9565,8 +9649,8 @@ COVID Update: No drop-ins during pandemic. Please call for assistance.</p>
         <div class="resource">
             <h3>
                 <span class="resource_name">WorkSource Lane County</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">2510 Oakmont Way, Eugene 97401</span>
@@ -9604,7 +9688,7 @@ COVID Update: No drop-ins during pandemic. Please call for assistance.</p>
             <h3>
                 <span class="resource_name">Boys &amp; Girls Clubs of Emerald Valley</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1545 W 22nd Ave, Eugene, 97405</span>
@@ -9640,7 +9724,7 @@ Harm Reduction Distribution (HRD) is a low barrier program that creates access t
             <h3>
                 <span class="resource_name">Early Assessment and Support Alliance (EASA)</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1200 Hilyard St, Ste 570, Eugene, 97401</span>
@@ -9654,8 +9738,8 @@ Harm Reduction Distribution (HRD) is a low barrier program that creates access t
         <div class="resource">
             <h3>
                 <span class="resource_name">First Place Family Center</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1995 Amazon Parkway, Eugene, 97405</span>
@@ -9672,7 +9756,7 @@ COVID Update: Two separate blocks of time for the preschool. Only six non-staff 
             <h3>
                 <span class="resource_name">Hosea Youth Services</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">834 Monroe St, Eugene, 97402</span>
@@ -9705,8 +9789,8 @@ COVID Update:  screening at the door. </p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Looking Glass - Station #7</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">931 W 7th Ave, Eugene, 97402</span>
@@ -9720,8 +9804,8 @@ COVID Update:  screening at the door. </p>
         <div class="resource">
             <h3>
                 <span class="resource_name">Looking Glass Community Services</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">260 E 11th Ave, Eugene, 97401</span>
@@ -9833,8 +9917,8 @@ S.A.N.T.A. &amp; Silver Tree
         <div class="resource">
             <h3>
                 <span class="resource_name">Ophelia’s Place</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">1577 Pearl St, Suite 100, Eugene, 97401</span>
@@ -9851,7 +9935,7 @@ COVID Update: All services (counseling, etc.) are being conducted virtually, pri
             <h3>
                 <span class="resource_name">Oregon Family Support Network</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">72A Centennial Loop, Suite 150, Eugene, 97401</span>
@@ -9865,8 +9949,8 @@ COVID Update: All services (counseling, etc.) are being conducted virtually, pri
         <div class="resource">
             <h3>
                 <span class="resource_name">Project Safe Place</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">Locations throughout Lane County</span>
@@ -9883,7 +9967,7 @@ This national program provides youth with safe places to seek help. Youth ages 1
             <h3>
                 <span class="resource_name">South Lane Mental Health Recovery Center</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">75 S 5th St, Cottage Grove, 97424</span>
@@ -9897,8 +9981,8 @@ This national program provides youth with safe places to seek help. Youth ages 1
         <div class="resource">
             <h3>
                 <span class="resource_name">The Child Center Crisis Response Program</span>
-                <span>\l\</span>
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">3995 Marcola Rd, Springfield, 97477</span>
@@ -9913,7 +9997,7 @@ This national program provides youth with safe places to seek help. Youth ages 1
             <h3>
                 <span class="resource_name">Youth ERA</span>
                 
-                <span>\w\</span>
+                <span class="resourceIcon">?</span>
             </h3>
             <p class="resource_contact">
                 <span class="resource_address">965 Oak Alley, Eugene, 97401</span>

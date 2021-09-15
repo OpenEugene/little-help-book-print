@@ -1,5 +1,9 @@
 package org.eugenetech.littlehelpbook;
 
+import com.itextpdf.html2pdf.ConverterProperties;
+import com.itextpdf.html2pdf.HtmlConverter;
+import com.itextpdf.html2pdf.resolver.font.DefaultFontProvider;
+import com.itextpdf.layout.font.FontProvider;
 import lombok.Cleanup;
 import lombok.extern.slf4j.Slf4j;
 import org.eugenetech.cli.Base;
@@ -8,11 +12,12 @@ import org.eugenetech.littlehelpbook.data.AirtableRecord;
 import org.eugenetech.littlehelpbook.data.Repository;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
-import org.thymeleaf.context.IContext;
 import org.thymeleaf.templatemode.TemplateMode;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.util.HashMap;
 import java.util.Locale;
@@ -72,17 +77,38 @@ public class BuildBook extends Base {
 
         final File path = new File(this.getProperty("output.path"));
 
-        @Cleanup final FileWriter englishWriter = new FileWriter(new File(path, "english.html"));
-        @Cleanup final FileWriter spanishWriter = new FileWriter(new File(path, "spanish.html"));
+        try {
+            final File englishFile = new File(path, "english.html");
+            final File spanishFile = new File(path, "spanish.html");
+//            final File englishFilePDF = new File(path, "english.pdf");
+//            final File spanishFilePDF = new File(path, "spanish.pdf");
 
-        @Cleanup final FileWriter englishWordWriter = new FileWriter(new File(path, "english.word.html"));
-        @Cleanup final FileWriter spanishWordWriter = new FileWriter(new File(path, "spanish.word.html"));
+            @Cleanup final FileWriter englishWriter = new FileWriter(englishFile);
+            @Cleanup final FileWriter spanishWriter = new FileWriter(spanishFile);
 
-        engine.process("english", english, englishWriter);
-        engine.process("spanish", spanish, spanishWriter);
+            engine.process("english", english, englishWriter);
+            engine.process("spanish", spanish, spanishWriter);
 
-        engine.process("english.word", english, englishWordWriter);
-        engine.process("spanish.word", spanish, spanishWordWriter);
+            englishWriter.close();
+            spanishWriter.close();
+
+            final ConverterProperties converterProperties = new ConverterProperties();
+            converterProperties.setFontProvider(new DefaultFontProvider(true, true, true));
+//            HtmlConverter.convertToPdf(new FileInputStream(englishFile), new FileOutputStream(englishFilePDF), converterProperties);
+//            HtmlConverter.convertToPdf(new FileInputStream(spanishFile), new FileOutputStream(spanishFilePDF), converterProperties);
+        } catch (final Exception e) {
+            throw e;
+        }
+
+        try {
+            @Cleanup final FileWriter englishWordWriter = new FileWriter(new File(path, "english.word.html"));
+            @Cleanup final FileWriter spanishWordWriter = new FileWriter(new File(path, "spanish.word.html"));
+
+            engine.process("english.word", english, englishWordWriter);
+            engine.process("spanish.word", spanish, spanishWordWriter);
+        } catch (final Exception e) {
+            throw e;
+        }
     }
 
     public static void main(String[] args) throws Exception {

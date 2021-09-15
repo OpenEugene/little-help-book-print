@@ -1,6 +1,18 @@
 <style>
-    body {
-        font-family: Ubuntu, "times new roman", times, roman, serif;
+    body, p, span, a, div {
+        font-family: "Noto Sans", Ubuntu, "Ubuntu", Verdana, sans-serif;
+        font-size: 10pt;
+    }
+
+    a:link {
+        text-underline: none;
+        font-weight: normal;
+        text-decoration: none;
+        color: black;
+    }
+
+    .index-outer {
+        column-count: 2;
     }
 
     #logo {
@@ -19,12 +31,14 @@
         padding-top: 0.5in;
         padding-bottom: 0.5in;
     }
+
     #subtitle {
         text-align: center;
         font-weight: bold;
         font-size: larger;
         padding-top: 0.5in;
     }
+
     #production {
         text-align: center;
     }
@@ -34,8 +48,14 @@
     }
 
     .resource_icon {
-        width: 12px;
-        height: 12px;
+        width: 8pt;
+        height: 8pt;
+        display: inline-block;
+        alignment: center;
+    }
+
+    .resourceIcon {
+        font-family: "Noto Emoji", "Noto-Emoji", "Noto Color Emoji","Noto Color E";
     }
 
     .resource_contact {
@@ -67,12 +87,12 @@
         margin: 0;
         padding: 0;
     }
+
     .resource_url {
         clear: both;
         margin: 0;
         padding: 0;
     }
-
 
 
     .crisis_name {
@@ -119,5 +139,9 @@
         width: 5.5in;
         height: 8.5in;
         size: 5.5in 8.5in;
+    }
+
+    .bodymatter a::after {
+        content: target-counter(attr(href url), page, decimal)
     }
 </style>
