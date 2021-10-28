@@ -126,9 +126,9 @@
     leave a note about our clever email address, we’d appreciate
     that.</p>
 
-<h2 style="page-break-before: always;">Legend</h2>
+<h2>Legend</h2>
 
-<table style="page-break-inside: avoid;">
+<table>
     <tr>
         <td class="resourceIcon">
             &#127760;
@@ -167,7 +167,7 @@
 <th:block th:each="category : ${repository.categories_es}" th:if="${category.hasResources()}">
     <h1 th:text="${category.name_es}" th:id="${category.id}"></h1>
 
-    <div class="resource" th:each="resource : ${category.resources_es}">
+    <th:block class="resource" th:each="resource : ${category.resources_es}">
         <h3>
             <span th:text="${resource.name_en}" class="resource_name"/>
             <span th:if="${resource.languageHelp}" class="resourceIcon">&#127760;</span>
@@ -180,12 +180,12 @@
         <p th:text="${resource.description_es}" class="resource_description"></p>
         <p th:text="${resource.hours_es}" class="resource_hours"></p>
         <p th:text="${resource.url}" class="resource_url"></p>
-    </div>
+    </th:block>
 
     <th:block th:each="subcategory : ${category.subcategories_en}" th:if="${subcategory.hasResources()}">
         <h2 th:text="${subcategory.name_es}" th:id="${subcategory.id}"></h2>
 
-        <div class="resource" th:each="resource : ${subcategory.resources_es}">
+        <th:block class="resource" th:each="resource : ${subcategory.resources_es}">
             <h3>
                 <span th:text="${resource.name_es}" class="resource_name"/>
                 <span th:if="${resource.languageHelp}" class="resourceIcon">&#127760;</span>
@@ -198,7 +198,7 @@
             <p th:text="${resource.description_es}" class="resource_description"></p>
             <p th:text="${resource.hours_es}" class="resource_hours"></p>
             <p th:text="${resource.url}" class="resource_url"></p>
-        </div>
+        </th:block>
     </th:block>
 </th:block>
 </body>
